@@ -1,10 +1,21 @@
+html,
 body {
-	font-family: "Montserrat";
+	height: 100%;
+}
+
+body {
+	font-family: $font-family-jost;
 }
 
 .wrapper {
-	//overflow-x: hidden;
+	min-height: 100%;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex: 1 1 auto;
 }
 
 .container {
@@ -13,7 +24,6 @@ body {
 	margin: 0 auto;
 	padding: 0 40px;
 }
-
 
 // Новий проект
 
