@@ -4,7 +4,13 @@ body {
 }
 
 body {
-	font-family: $font-family-jost;
+	font-family: $font-family-inter;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
 }
 
 .wrapper {
@@ -19,34 +25,6 @@ body {
 }
 
 .container {
-	//width: 100%;
-	max-width: 1476px;
+	max-width: $container-width;
 	margin: 0 auto;
-	padding: 0 40px;
-}
-
-// Новий проект
-
-.webmalik {
-	display: flex;
-	background: #111;
-	flex-wrap: nowrap;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-weight: bold;
-	h1 {
-		color: #fff;
-		@include adaptiv-value("font-size", 30, 14, 1);
-	}
-	img {
-		margin: 3rem auto;
-		@include adaptiv-value("width", 600, 100, 1);
-	}
-
-	width: 100vw;
-	height: 100vh;
-	background: #111;
-
-	@include adaptiv-value("font-size", "3 rem", "0.5rem", 1);
 }
