@@ -1,3 +1,66 @@
+.catalog {
+	&__dropdown {
+		display: block;
+		position: absolute;
+		top: 3.5rem;
+		padding-top: 1.25rem;
+		left: 0;
+	}
+	&__dropdown-list {
+		border-radius: 0.625rem;
+		border: 1px solid $yellow_color;
+		background: #f3f3f3;
+		//padding: 1.5rem;
+		padding: 0 1.5rem;
+		border-width: 0px;
+		max-height: 0;
+		width: 100%;
+		overflow: hidden;
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 1.25rem;
+
+			li {
+				a {
+					display: flex;
+					align-items: center;
+					gap: 0.38rem;
+					color: $black_color;
+					font-family: $font-family-inter;
+					font-size: 0.875rem;
+					font-style: normal;
+					font-weight: 300;
+					transition: $hover-transition;
+					&::after {
+						content: "";
+						display: block;
+						background-image: url("../img/arrow-right.svg");
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: cover;
+						min-width: 0.625rem;
+						min-height: 0.625rem;
+						transition: $hover-transition;
+					}
+				}
+
+				&:hover {
+					a {
+						font-weight: 500;
+						transition: $hover-transition;
+						&::after {
+							background-image: url("../img/arrow-right-hover.svg");
+							transition: $hover-transition;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 .header {
 	&__wrapper {
 		background-color: $black_color;
@@ -64,6 +127,7 @@
 	}
 
 	&__button {
+		position: relative;
 		display: flex;
 		align-items: center;
 		color: $black_color;
@@ -75,9 +139,18 @@
 		border-radius: 0.625rem;
 		border: 2px solid $yellow_color;
 		padding: 1rem 0.94rem;
+		cursor: pointer;
 
 		p {
 			padding-right: 0.38rem;
+		}
+
+		&:hover {
+			& .catalog__dropdown-list {
+				padding: 1.5rem 1.5rem;
+				border-width: 1px;
+				max-height: 100%;
+			}
 		}
 	}
 
@@ -163,8 +236,7 @@
 		z-index: 2;
 	}
 }
-.container {
-}
+
 .contacts {
 	&__item {
 		display: flex;

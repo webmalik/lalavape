@@ -56,85 +56,99 @@ button {
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Medium.woff") format("woff"), url("../fonts/Inter-Medium.woff2") format("woff2");
-  font-weight: Medium;
+  src: url("../fonts/Inter-300.woff") format("woff"), url("../fonts/Inter-300.woff2") format("woff2");
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Medium.woff") format("woff"), url("../fonts/Inter-Medium.woff2") format("woff2");
-  font-weight: Medium;
+  src: url("../fonts/Inter-300.woff") format("woff"), url("../fonts/Inter-300.woff2") format("woff2");
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff") format("woff"), url("../fonts/Inter-Regular.woff2") format("woff2");
-  font-weight: Regular;
+  src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff") format("woff"), url("../fonts/Inter-Regular.woff2") format("woff2");
-  font-weight: Regular;
+  src: url("../fonts/Inter-400.woff") format("woff"), url("../fonts/Inter-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff") format("woff"), url("../fonts/Inter-SemiBold.woff2") format("woff2");
-  font-weight: SemiBold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Jost";
-  font-display: swap;
-  src: url("../fonts/Jost-Medium.woff") format("woff"), url("../fonts/Jost-Medium.woff2") format("woff2");
-  font-weight: Medium;
+  src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff") format("woff"), url("../fonts/Inter-SemiBold.woff2") format("woff2");
-  font-weight: SemiBold;
+  src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Jost";
   font-display: swap;
-  src: url("../fonts/Jost-Regular.woff") format("woff"), url("../fonts/Jost-Regular.woff2") format("woff2");
-  font-weight: Regular;
+  src: url("../fonts/Jost-400.woff") format("woff"), url("../fonts/Jost-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Jost";
   font-display: swap;
-  src: url("../fonts/Jost-Medium.woff") format("woff"), url("../fonts/Jost-Medium.woff2") format("woff2");
-  font-weight: Medium;
+  src: url("../fonts/Jost-400.woff") format("woff"), url("../fonts/Jost-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-400.woff") format("woff"), url("../fonts/Inter-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Jost";
   font-display: swap;
-  src: url("../fonts/Jost-Regular.woff") format("woff"), url("../fonts/Jost-Regular.woff2") format("woff2");
-  font-weight: Regular;
+  src: url("../fonts/Jost-600.woff") format("woff"), url("../fonts/Jost-600.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Jost";
   font-display: swap;
-  src: url("../fonts/Jost-SemiBold.woff") format("woff"), url("../fonts/Jost-SemiBold.woff2") format("woff2");
-  font-weight: SemiBold;
+  src: url("../fonts/Jost-500.woff") format("woff"), url("../fonts/Jost-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Jost";
   font-display: swap;
-  src: url("../fonts/Jost-SemiBold.woff") format("woff"), url("../fonts/Jost-SemiBold.woff2") format("woff2");
-  font-weight: SemiBold;
+  src: url("../fonts/Jost-600.woff") format("woff"), url("../fonts/Jost-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Jost";
+  font-display: swap;
+  src: url("../fonts/Jost-500.woff") format("woff"), url("../fonts/Jost-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 /*
@@ -169,6 +183,59 @@ a {
 .container {
   max-width: 1160px;
   margin: 0 auto;
+}
+
+.catalog__dropdown {
+  display: block;
+  position: absolute;
+  top: 3.5rem;
+  padding-top: 1.25rem;
+  left: 0;
+}
+.catalog__dropdown-list {
+  border-radius: 0.625rem;
+  border: 1px solid #ffcb31;
+  background: #f3f3f3;
+  padding: 0 1.5rem;
+  border-width: 0px;
+  max-height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.catalog__dropdown-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.catalog__dropdown-list ul li a {
+  display: flex;
+  align-items: center;
+  gap: 0.38rem;
+  color: #2b2b2b;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 300;
+  transition: all 0.3s ease-in-out;
+}
+.catalog__dropdown-list ul li a::after {
+  content: "";
+  display: block;
+  background-image: url("../img/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-width: 0.625rem;
+  min-height: 0.625rem;
+  transition: all 0.3s ease-in-out;
+}
+.catalog__dropdown-list ul li:hover a {
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+.catalog__dropdown-list ul li:hover a::after {
+  background-image: url("../img/arrow-right-hover.svg");
+  transition: all 0.3s ease-in-out;
 }
 
 .header__wrapper {
@@ -225,6 +292,7 @@ a {
   object-fit: cover;
 }
 .header__button {
+  position: relative;
   display: flex;
   align-items: center;
   color: #2b2b2b;
@@ -236,9 +304,15 @@ a {
   border-radius: 0.625rem;
   border: 2px solid #ffcb31;
   padding: 1rem 0.94rem;
+  cursor: pointer;
 }
 .header__button p {
   padding-right: 0.38rem;
+}
+.header__button:hover .catalog__dropdown-list {
+  padding: 1.5rem 1.5rem;
+  border-width: 1px;
+  max-height: 100%;
 }
 .header__search {
   border-radius: 0.625rem;
