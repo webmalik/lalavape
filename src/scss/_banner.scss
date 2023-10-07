@@ -1,0 +1,44 @@
+.banner {
+	&__container {
+		width: 100%;
+	}
+
+	&__wrapper {
+	}
+
+	&__slide {
+		width: 100%;
+		img {
+			width: auto;
+			height: 100%;
+			min-width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	&__pagination {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 1.25rem;
+		.swiper-pagination-bullet {
+			min-width: 0.875rem;
+			min-height: 0.875rem;
+			border-radius: 0.1875rem;
+			border: 2px solid $yellow_color;
+			opacity: 1;
+			background: none;
+			transition: all 0.5s ease-in-out;
+
+			&-active {
+				min-width: 0.875rem;
+				min-height: 0.875rem;
+				border-radius: 0.1875rem;
+				background: $yellow_color;
+				border: 2px solid $yellow_color;
+				transition: all 0.5s ease-in-out;
+			}
+		}
+	}
+}

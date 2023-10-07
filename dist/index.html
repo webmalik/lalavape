@@ -86,7 +86,7 @@
 				<a href="" class="header__logo">
 					<img src="img/logo.png" alt="">
 				</a>
-				<div class="header__button button">
+				<div class="header__button">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 						<path
 							d="M2 10L2 4L10 4.00001V10L2 10ZM2 20L2 14H10V20L2 20ZM14 10L14 4L22 4.00001V10L14 10ZM14 14H22V20L14 20L14 14Z"
@@ -166,7 +166,143 @@
 	</div>
 </header>
 		<main class="main">
-
+	<section class="banner">
+		<div class="banner__container swiper">
+			<div class="banner__wrapper swiper-wrapper">
+				<div class="banner__slide swiper-slide">
+					<img src="img/banner.png" alt="Banner">
+				</div>
+				<div class="banner__slide swiper-slide">
+					<img src="img/banner.png" alt="Banner">
+				</div>
+				<div class="banner__slide swiper-slide">
+					<img src="img/banner.png" alt="Banner">
+				</div>
+			</div>
+		</div>
+		<div class="banner__pagination"></div>
+	</section>
+	<section class="popular">
+		<div class="container">
+			<h1 class="popular__title title">
+				Популярні бренди
+			</h1>
+			<div class="popular__brand">
+				<a href="#" class="popular__button">
+					CAPELLA
+				</a>
+				<a href="#" class="popular__button">
+					TPA
+				</a>
+				<a href="#" class="popular__button">
+					SILVERLINE
+				</a>
+				<a href="#" class="popular__button">
+					FLAVOURANT
+				</a>
+				<a href="#" class="popular__button">
+					XI'AN TAIMA
+				</a>
+				<a href="#" class="popular__button">
+					HILIQ
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="products">
+		<div class="container">
+			<div class="products__nav">
+				<div class="products__button tab__button button active" data-tab="popular">
+					Популярні товари
+				</div>
+				<div class="products__button tab__button button" data-tab="new">
+					Новинки
+				</div>
+				<a href="#" class="products__all">
+					усі товари
+				</a>
+			</div>
+			<div class="products__wrapper swiper">
+				<div class="products__slider swiper-wrapper tab__content active" data-tab="popular">
+					<div class="card swiper-slide">
+						<h1 class="title">popular</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">popular</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">popular</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">popular</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">popular</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">popular</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">popular</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">popular</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">popular</h1>
+					</div>
+				</div>
+				<div class="products__slider swiper-wrapper tab__content" data-tab="new">
+					<div class="card swiper-slide">
+						<h1 class="title">new</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">new</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">new</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">new</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">new</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">new</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">new</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">new</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">new</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">new</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">new</h1>
+					</div>
+					<div class="card swiper-slide">
+						<h1 class="title">new</h1>
+					</div>
+				</div>
+			</div>
+			<div class="products__next">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+					<path d="M7 21L16 12L7 3" stroke="#2B2B2B" stroke-width="2" />
+				</svg>
+			</div>
+			<div class="products__prev">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+					<path d="M17 3L8 12L17 21" stroke="#2B2B2B" stroke-width="2" />
+				</svg>
+			</div>
+		</div>
+	</section>
 </main>
 		<footer class="footer">
 

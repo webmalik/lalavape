@@ -1,6 +1,11 @@
 import $ from "jquery";
-import Aos from "aos";
-import Siema from "siema";
+import Swiper from "swiper";
+import { Navigation, Pagination } from 'swiper/modules';
+
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export function isWebp() {
 	function testWebP(callback) {
@@ -71,63 +76,57 @@ export function pageNav() {
 	$(window).on('scroll', activateMenuItem);
 }
 
-export function aos_js() {
-	Aos.init();
-}
-
-export function slider() {
-	const slider = new Siema({
-		selector: '.slider',
+export function banner() {
+	const banner = new Swiper('.banner__container', {
 		loop: true,
-		onChange: updatePagination,
-		duration: 1000,
-		perPage: 4,
-		easing: 'ease-out',
+		modules: [Pagination],
+		slidesPerView: 1,
+		pagination: {
+			el: '.banner__pagination',
+			clickable: true,
+		},
 	});
-
-	function updatePagination() {
-		const paginationItems = Array.from(document.querySelectorAll('.slider-pagination li'));
-		paginationItems.map((item, index) => {
-			if (index === slider.currentSlide) {
-				item.classList.add('active');
-			} else {
-				item.classList.remove('active');
-			}
-		});
-	}
-
-	function startAutoPlay(intervalTime) {
-		let autoPlayInterval = setInterval(function () {
-			slider.next();
-			updatePagination();
-		}, intervalTime);
-	}
-	updatePagination();
-	startAutoPlay(5000);
 }
 
-export function tel() {
-	var input = document.getElementById("phone-ip");
+export function productsSlider() {
+	const products = new Swiper('.products__wrapper', {
+		loop: true,
+		modules: [Navigation],
+		slidesPerView: 5,
+		navigation: {
+			nextEl: '.products__next',
+			prevEl: '.products__prev',
+		},
+	});
+}
 
-	input.onfocus = function (e) {
-		if (this.value === '') {
-			this.value += '+38 (';
-		}
-	};
+export function tabs() {
+	document.addEventListener("DOMContentLoaded", function () {
+		const tabButtons = document.querySelectorAll(".tab__button");
+		const tabContents = document.querySelectorAll(".tab__content");
 
-	input.onkeyup = function (e) {
-		var len = this.value.length;
-		if (len === 8) {
-			this.value += ') ';
+		tabButtons.forEach(function (button) {
+			button.addEventListener("click", function () {
+				const tabId = this.getAttribute("data-tab");
+				showTab(tabId);
+			});
+		});
+
+		function showTab(tabId) {
+			tabContents.forEach(function (content) {
+				content.classList.remove("active");
+			});
+			tabButtons.forEach(function (button) {
+				button.classList.remove("active");
+			});
+
+			let el = document.querySelectorAll(`[data-tab="${tabId}"]`);
+
+			el.forEach(function (element) {
+				element.classList.add('active');
+			});
 		}
-		if (len === 9) {
-			this.value += ' ';
-		}
-		if (len === 12) {
-			this.value += '-';
-		}
-	}
-	if (len === 15) {
-		this.value += '-';
-	}
+
+		showTab(tabButtons[0].getAttribute("data-tab"));
+	});
 }

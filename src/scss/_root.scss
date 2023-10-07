@@ -24,7 +24,34 @@ a {
 	flex: 1 1 auto;
 }
 
+.title {
+	color: $black_color;
+	font-family: $font-family-jost;
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 600;
+	text-align: center;
+}
+
+.button {
+	border-radius: 0.625rem;
+	background-color: $yellow_color;
+	padding: 1.38rem;
+	border: 2px solid $yellow_color;
+	box-sizing: border-box;
+	color: $black_color;
+	font-family: $font-family-jost;
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 0%;
+
+	transition: all 0.5s ease-in-out;
+	cursor: pointer;
+}
+
 .container {
+	position: relative;
 	max-width: $container-width;
 	margin: 0 auto;
 }
