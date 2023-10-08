@@ -1,0 +1,11 @@
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Check in a Circle" clip-path="url(#clip0_161_7147)">
+<circle id="Outer Circle" cx="4.99992" cy="4.99998" r="3.91667" stroke="#2B2B2B" stroke-width="0.5"/>
+<path id="Checkmark" d="M2.91675 5.00002L4.34904 6.25002L7.08341 3.54169" stroke="#2B2B2B" stroke-width="0.5"/>
+</g>
+<defs>
+<clipPath id="clip0_161_7147">
+<rect width="10" height="10" fill="white"/>
+</clipPath>
+</defs>
+</svg>

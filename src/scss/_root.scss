@@ -44,10 +44,25 @@ a {
 	font-size: 1.5rem;
 	font-style: normal;
 	font-weight: 600;
-	line-height: 0%;
+	line-height: 100%;
+	display: inline-block;
 
 	transition: all 0.5s ease-in-out;
 	cursor: pointer;
+}
+
+.link {
+	&__all {
+		position: absolute;
+		right: 0;
+		color: var(--grey-2, #8b8b8b);
+		font-family: $font-family-inter;
+		font-size: 1rem;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 130%; /* 1.3rem */
+		text-decoration-line: underline;
+	}
 }
 
 .container {

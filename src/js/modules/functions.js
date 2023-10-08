@@ -88,19 +88,36 @@ export function banner() {
 	});
 }
 
-export function productsSlider() {
-	const products = new Swiper('.products__wrapper', {
-		loop: true,
-		modules: [Navigation],
-		slidesPerView: 5,
-		navigation: {
-			nextEl: '.products__next',
-			prevEl: '.products__prev',
-		},
-	});
+
+let productsSwiper = null;
+
+function destr() {
+	if (productsSwiper) {
+		productsSwiper.destroy(true, true);
+	}
 }
 
+function productsSlider() {
+
+	let activeTab = document.querySelector('.products__slider.active');
+
+	if (activeTab) {
+		productsSwiper = new Swiper(activeTab, {
+			loop: true,
+			modules: [Navigation],
+			spaceBetween: 20,
+			slidesPerView: 5,
+			navigation: {
+				nextEl: '.products__next',
+				prevEl: '.products__prev',
+			},
+		});
+	}
+}
+
+
 export function tabs() {
+
 	document.addEventListener("DOMContentLoaded", function () {
 		const tabButtons = document.querySelectorAll(".tab__button");
 		const tabContents = document.querySelectorAll(".tab__content");
@@ -114,19 +131,39 @@ export function tabs() {
 
 		function showTab(tabId) {
 			tabContents.forEach(function (content) {
-				content.classList.remove("active");
+				if (content.getAttribute("data-tab") === tabId) {
+					content.classList.add("active");
+					content.style.display = "flex";
+				} else {
+					content.classList.remove("active");
+					content.style.display = "none";
+				}
 			});
 			tabButtons.forEach(function (button) {
-				button.classList.remove("active");
+				if (button.getAttribute("data-tab") === tabId) {
+					button.classList.add("active");
+				} else {
+					button.classList.remove("active");
+				}
 			});
 
-			let el = document.querySelectorAll(`[data-tab="${tabId}"]`);
-
-			el.forEach(function (element) {
-				element.classList.add('active');
-			});
+			destr();
+			productsSlider();
 		}
 
 		showTab(tabButtons[0].getAttribute("data-tab"));
 	});
+}
+
+export function rate() {
+	let Circle = function (sel) {
+		let circles = document.querySelectorAll(sel);
+		[].forEach.call(circles, function (el) {
+			let valEl = parseFloat(el.innerHTML);
+			valEl = (valEl * 2800) * 2 / 100;
+			el.innerHTML = '<svg width="120" height="120"><circle transform="rotate(-90)" r="50" cx="-60" cy="60" /><circle transform="rotate(-90)" style="stroke-dasharray:' + valEl + 'px 408px;stroke-linecap: round;" r="50" cx="-60" cy="60" /></svg>';
+
+		});
+	};
+	Circle('.reviews__circle');
 }

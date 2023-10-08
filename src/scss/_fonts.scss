@@ -15,6 +15,13 @@
 @font-face {
 	font-family: 'Inter';
 	font-display: swap;
+	src: url("../fonts/Inter-400.woff") format("woff"), url("../fonts/Inter-400.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Inter';
+	font-display: swap;
 	src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
 	font-weight: 500;
 	font-style: normal;
@@ -41,6 +48,20 @@
 	font-style: normal;
 }
 @font-face {
+	font-family: 'Jost';
+	font-display: swap;
+	src: url("../fonts/Jost-400.woff") format("woff"), url("../fonts/Jost-400.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Jost';
+	font-display: swap;
+	src: url("../fonts/Jost-400.woff") format("woff"), url("../fonts/Jost-400.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
 	font-family: 'Inter';
 	font-display: swap;
 	src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
@@ -50,22 +71,8 @@
 @font-face {
 	font-family: 'Jost';
 	font-display: swap;
-	src: url("../fonts/Jost-400.woff") format("woff"), url("../fonts/Jost-400.woff2") format("woff2");
-	font-weight: 400;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Jost';
-	font-display: swap;
-	src: url("../fonts/Jost-400.woff") format("woff"), url("../fonts/Jost-400.woff2") format("woff2");
-	font-weight: 400;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Inter';
-	font-display: swap;
-	src: url("../fonts/Inter-400.woff") format("woff"), url("../fonts/Inter-400.woff2") format("woff2");
-	font-weight: 400;
+	src: url("../fonts/Jost-500.woff") format("woff"), url("../fonts/Jost-500.woff2") format("woff2");
+	font-weight: 500;
 	font-style: normal;
 }
 @font-face {
@@ -87,12 +94,5 @@
 	font-display: swap;
 	src: url("../fonts/Jost-600.woff") format("woff"), url("../fonts/Jost-600.woff2") format("woff2");
 	font-weight: 600;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Jost';
-	font-display: swap;
-	src: url("../fonts/Jost-500.woff") format("woff"), url("../fonts/Jost-500.woff2") format("woff2");
-	font-weight: 500;
 	font-style: normal;
 }
