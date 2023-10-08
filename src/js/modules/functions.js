@@ -167,3 +167,30 @@ export function rate() {
 	};
 	Circle('.reviews__circle');
 }
+
+export function accordion(mode = true) {
+	const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+
+	// Додати обробник подій для кожного заголовку
+	accordionTriggers.forEach(trigger => {
+		trigger.addEventListener('click', () => {
+			if (mode) {
+				// Закрити всі аккордеони, крім того, який був клікнутий
+				accordionTriggers.forEach(otherTrigger => {
+					if (otherTrigger !== trigger) {
+						otherTrigger.classList.remove('active');
+						const otherContent = otherTrigger.nextElementSibling;
+						let parentContainer = otherTrigger.parentNode.parentNode;
+						otherContent.classList.remove('active');
+					}
+				});
+			}
+
+			trigger.classList.toggle('active');
+
+			const content = trigger.nextElementSibling;
+
+			content.classList.toggle('active');
+		});
+	});
+}

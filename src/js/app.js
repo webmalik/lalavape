@@ -5,3 +5,4 @@ wmFunctions.banner();
 //wmFunctions.productsSlider();
 wmFunctions.tabs();
 wmFunctions.rate();
+wmFunctions.accordion(false);
