@@ -77,13 +77,6 @@ button {
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
   src: url("../fonts/Inter-400.woff") format("woff"), url("../fonts/Inter-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -91,8 +84,8 @@ button {
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
-  font-weight: 600;
+  src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
@@ -140,15 +133,22 @@ button {
 @font-face {
   font-family: "Jost";
   font-display: swap;
-  src: url("../fonts/Jost-500.woff") format("woff"), url("../fonts/Jost-500.woff2") format("woff2");
-  font-weight: 500;
+  src: url("../fonts/Jost-600.woff") format("woff"), url("../fonts/Jost-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Jost";
   font-display: swap;
-  src: url("../fonts/Jost-600.woff") format("woff"), url("../fonts/Jost-600.woff2") format("woff2");
-  font-weight: 600;
+  src: url("../fonts/Jost-500.woff") format("woff"), url("../fonts/Jost-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 /*
@@ -1043,6 +1043,7 @@ circle:nth-child(2n) {
   margin-bottom: 1.12rem;
   height: 100%;
   max-height: 12.5rem;
+  display: block;
 }
 .blog__image--small picture,
 .blog__image--small img {
@@ -1059,6 +1060,7 @@ circle:nth-child(2n) {
   font-weight: 600;
   line-height: 130%;
   margin-bottom: 1rem;
+  display: block;
 }
 .blog__description {
   color: var(--grey-2, #8b8b8b);
