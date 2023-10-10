@@ -22,9 +22,18 @@
 		ul {
 			display: flex;
 			flex-direction: column;
-			gap: 1.25rem;
+			// gap: 1.25rem;
 
 			li {
+				padding: 0.75rem 0;
+
+				&:first-child {
+					padding: 0 0 0.75rem;
+				}
+
+				&:last-child {
+					padding: 0.75rem 0 0;
+				}
 				a {
 					display: flex;
 					align-items: center;
@@ -34,7 +43,6 @@
 					font-size: 0.875rem;
 					font-style: normal;
 					font-weight: 300;
-					transition: $hover-transition;
 					&::after {
 						content: "";
 						display: block;
@@ -44,17 +52,14 @@
 						background-size: cover;
 						min-width: 0.625rem;
 						min-height: 0.625rem;
-						transition: $hover-transition;
 					}
 				}
 
 				&:hover {
 					a {
 						font-weight: 500;
-						transition: $hover-transition;
 						&::after {
 							background-image: url("../img/arrow-right-hover.svg");
-							transition: $hover-transition;
 						}
 					}
 				}
@@ -64,6 +69,8 @@
 }
 
 .header {
+	position: relative;
+	z-index: 3;
 	&__wrapper {
 		background-color: $black_color;
 	}
@@ -154,7 +161,7 @@
 			& .catalog__dropdown-list {
 				padding: 1.5rem 1.5rem;
 				border-width: 1px;
-				max-height: 100rem;
+				max-height: 30rem;
 				transition: $hover-transition;
 			}
 		}

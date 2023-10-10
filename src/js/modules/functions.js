@@ -1,6 +1,7 @@
 import $ from "jquery";
 import Swiper from "swiper";
 import { Navigation, Pagination } from 'swiper/modules';
+import LocomotiveScroll from "locomotive-scroll";
 
 
 import 'swiper/css';
@@ -116,11 +117,11 @@ function productsSlider() {
 }
 
 
-export function tabs() {
+export function tabs(container) {
 
 	document.addEventListener("DOMContentLoaded", function () {
-		const tabButtons = document.querySelectorAll(".tab__button");
-		const tabContents = document.querySelectorAll(".tab__content");
+		const tabButtons = container.querySelectorAll(".tab__button");
+		const tabContents = container.querySelectorAll(".tab__content");
 
 		tabButtons.forEach(function (button) {
 			button.addEventListener("click", function () {
@@ -193,4 +194,105 @@ export function accordion(mode = true) {
 			content.classList.toggle('active');
 		});
 	});
+}
+
+export function readMore() {
+
+	const textBlocks = document.querySelectorAll(".seo__block");
+	const showMoreLink = document.querySelector(".seo__all");
+	const container = document.querySelector(".seo__container");
+	let max = container.offsetHeight + 100;
+
+	let initialHeight = 0;
+
+	for (let i = 0; i < 7; i++) {
+		initialHeight += textBlocks[i].offsetHeight;
+	}
+
+	container.style.maxHeight = initialHeight + "px";
+	let isOpen = true;
+
+	showMoreLink.addEventListener("click", function (event) {
+		event.preventDefault();
+
+		if (isOpen) {
+			container.style.maxHeight = max + "px";
+			isOpen = false;
+			showMoreLink.textContent = "приховати";
+			showMoreLink.classList.add('open');
+		} else {
+			container.style.maxHeight = initialHeight + "px";
+			isOpen = true;
+			showMoreLink.textContent = "читати далі";
+			showMoreLink.classList.remove('open');
+		}
+	});
+}
+
+export function locomotivescroll() {
+	const locomotiveScroll = new LocomotiveScroll({
+		lenisOptions: {
+			wrapper: window,
+			content: document.documentElement,
+			lerp: 0.1,
+			duration: 1.2,
+			orientation: 'vertical',
+			gestureOrientation: 'vertical',
+			smoothWheel: true,
+			smoothTouch: false,
+			wheelMultiplier: 1,
+			touchMultiplier: 2,
+			normalizeWheel: true,
+			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+		},
+	});
+}
+
+export function modal() {
+	const open = document.querySelectorAll('.open__modal');
+	const modal = document.querySelectorAll('.modal');
+	let dataModal, window;
+
+	open.forEach(function (el) {
+		el.addEventListener('click', () => {
+			dataModal = el.getAttribute('data-modal');
+
+			modal.forEach(function (mod) {
+				if (mod.classList.contains('active')) {
+					mod.classList.remove('active');
+				}
+			});
+
+			modal.forEach(function (mod) {
+				if (mod.getAttribute('data-modal') === dataModal) {
+					window = mod;
+					setTimeout(() => {
+						window.classList.remove('close__modal--animations');
+						window.classList.add('active');
+					}, 1200);
+
+				}
+			});
+		});
+
+		el.addEventListener('click', () => {
+			let close = window.querySelector('.modal__close');
+			let wrapper = window.querySelector('.modal__wrapper');
+			window.classList.remove('close__modal--animations');
+			window.classList.add('active');
+
+			window.addEventListener('click', (e) => {
+				if (e.target != wrapper && !wrapper.contains(e.target)) {
+					window.classList.add('close__modal--animations');
+					window.classList.remove('active');
+				}
+			});
+			close.addEventListener('click', () => {
+				window.classList.add('close__modal--animations');
+				window.classList.remove('active');
+			});
+
+		});
+	});
+
 }
