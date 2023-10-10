@@ -1,16 +1,84 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,8 +88,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -29,16 +106,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -84,8 +165,8 @@ button {
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
-  font-weight: 600;
+  src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
@@ -149,6 +230,23 @@ button {
   font-display: swap;
   src: url("../fonts/Jost-600.woff") format("woff"), url("../fonts/Jost-600.woff2") format("woff2");
   font-weight: 600;
+<<<<<<< HEAD
+=======
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Jost";
+  font-display: swap;
+  src: url("../fonts/Jost-500.woff") format("woff"), url("../fonts/Jost-500.woff2") format("woff2");
+  font-weight: 500;
+>>>>>>> c6292b5f17c2607f30be3e14e79384734a254bcd
   font-style: normal;
 }
 /*
@@ -1052,6 +1150,7 @@ circle:nth-child(2n) {
   margin-bottom: 1.12rem;
   height: 100%;
   max-height: 12.5rem;
+  display: block;
 }
 .blog__image--small picture,
 .blog__image--small img {
@@ -1068,6 +1167,7 @@ circle:nth-child(2n) {
   font-weight: 600;
   line-height: 130%;
   margin-bottom: 1rem;
+  display: block;
 }
 .blog__description {
   color: var(--grey-2, #8b8b8b);
