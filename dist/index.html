@@ -3386,18 +3386,119 @@
 		</div>
 	</div>
 </footer>
-<section class="modal" data-modal="login">
+<section class="modal active" data-modal="login">
 	<div class="modal__wrapper">
 		<div class="modal__container login">
 			<div class="login__buttons">
-				<div class="tab__button active" data-tab="login">Вхід</div>
-				<div class="tab__button" data-tab="registration">Реєстрація</div>
+				<div class="tab__button button active" data-tab="login">Вхід</div>
+				<div class="tab__button button" data-tab="registration">Реєстрація</div>
 			</div>
 			<div class="login__content tab__content active" data-tab="login">
-				1
+				<div class="login__form">
+					<form action="#" class="form">
+						<h4 class="login__title">Телефон або електрона пошта <span>*</span></h4>
+						<input type="text" placeholder="Ваш телефон або електрона пошта">
+						<h4 class="login__title">Пароль <span>*</span></h4>
+						<input type="password" placeholder="Введіть пароль">
+						<div class="login__control">
+							<input type="checkbox" name="member" id="member">
+							<label for="member">Запамʼятати мене</label>
+							<a href="#" class="login__restore">Забули пароль?</a>
+						</div>
+						<input type="submit" class="login__submit button" value="Увійти">
+					</form>
+				</div>
+				<div class="login__social--wrapper">
+					<div class="login__social">
+						<span class="login__subtitle">або</span>
+						<h4 class="login__title">Увійти за допомогою</h4>
+						<div class="login__social--buttons">
+							<a href="#" class="login__google">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path
+										d="M21.8055 10.0415H21V10H12V14H17.6515C16.827 16.3285 14.6115 18 12 18C8.6865 18 6 15.3135 6 12C6 8.6865 8.6865 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C6.4775 2 2 6.4775 2 12C2 17.5225 6.4775 22 12 22C17.5225 22 22 17.5225 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z"
+										fill="#FFC107" />
+									<path
+										d="M3.153 7.3455L6.4385 9.755C7.3275 7.554 9.4805 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C8.159 2 4.828 4.1685 3.153 7.3455Z"
+										fill="#FF3D00" />
+									<path
+										d="M12 22.0001C14.583 22.0001 16.93 21.0116 18.7045 19.4041L15.6095 16.7851C14.5718 17.5743 13.3037 18.0011 12 18.0001C9.399 18.0001 7.1905 16.3416 6.3585 14.0271L3.0975 16.5396C4.7525 19.7781 8.1135 22.0001 12 22.0001Z"
+										fill="#4CAF50" />
+									<path
+										d="M21.8055 10.0415H21V10H12V14H17.6515C17.2571 15.1082 16.5467 16.0766 15.608 16.7855L15.6095 16.7845L18.7045 19.4035C18.4855 19.6025 22 17 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z"
+										fill="#1976D2" />
+								</svg>
+								<span>Google</span>
+							</a>
+							<a href="#" class="login__google">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path
+										d="M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 16.84 5.44 20.87 10 21.8V15H8V12H10V9.5C10 7.57 11.57 6 13.5 6H16V9H14C13.45 9 13 9.45 13 10V12H16V15H13V21.95C18.05 21.45 22 17.19 22 12Z"
+										fill="#23599B" />
+								</svg>
+								<span>Facebook</span>
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="login__content tab__content" data-tab="registration">
-
+				<div class="login__form">
+					<form action="#" class="form">
+						<h4 class="login__title">Імʼя<span>*</span></h4>
+						<input type="text" placeholder="Ваше імʼя">
+						<h4 class="login__title">Прізвище <span>*</span></h4>
+						<input type="text" placeholder="Ваше прізвище">
+						<h4 class="login__title">Телефон<span>*</span></h4>
+						<input type="text" placeholder="Ваш телефон">
+						<h4 class="login__title">Електрона пошта <span>*</span></h4>
+						<input type="text" placeholder="Ваша електрона пошта">
+						<h4 class="login__title">Придумайте пароль <span>*</span></h4>
+						<input type="password" placeholder="Придумайте пароль">
+						<div class="login__control">
+							<input type="checkbox" name="reestr" id="reestr">
+							<label for="reestr">
+							</label>
+							<a href="#" class="login__conditions">Реєструючись, ви погоджуєтеся з умовами положення про обробку
+								і захист персональних
+								даних та угодою користувача</a>
+						</div>
+						<input type="submit" class="login__submit button" value="Зареєструватись">
+					</form>
+				</div>
+				<div class="login__social--wrapper">
+					<div class="login__social">
+						<span class="login__subtitle">або</span>
+						<h4 class="login__title">Увійти за допомогою</h4>
+						<div class="login__social--buttons">
+							<a href="#" class="login__google">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path
+										d="M21.8055 10.0415H21V10H12V14H17.6515C16.827 16.3285 14.6115 18 12 18C8.6865 18 6 15.3135 6 12C6 8.6865 8.6865 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C6.4775 2 2 6.4775 2 12C2 17.5225 6.4775 22 12 22C17.5225 22 22 17.5225 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z"
+										fill="#FFC107" />
+									<path
+										d="M3.153 7.3455L6.4385 9.755C7.3275 7.554 9.4805 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C8.159 2 4.828 4.1685 3.153 7.3455Z"
+										fill="#FF3D00" />
+									<path
+										d="M12 22.0001C14.583 22.0001 16.93 21.0116 18.7045 19.4041L15.6095 16.7851C14.5718 17.5743 13.3037 18.0011 12 18.0001C9.399 18.0001 7.1905 16.3416 6.3585 14.0271L3.0975 16.5396C4.7525 19.7781 8.1135 22.0001 12 22.0001Z"
+										fill="#4CAF50" />
+									<path
+										d="M21.8055 10.0415H21V10H12V14H17.6515C17.2571 15.1082 16.5467 16.0766 15.608 16.7855L15.6095 16.7845L18.7045 19.4035C18.4855 19.6025 22 17 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z"
+										fill="#1976D2" />
+								</svg>
+								<span>Google</span>
+							</a>
+							<a href="#" class="login__google">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path
+										d="M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 16.84 5.44 20.87 10 21.8V15H8V12H10V9.5C10 7.57 11.57 6 13.5 6H16V9H14C13.45 9 13 9.45 13 10V12H16V15H13V21.95C18.05 21.45 22 17.19 22 12Z"
+										fill="#23599B" />
+								</svg>
+								<span>Facebook</span>
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="modal__close">

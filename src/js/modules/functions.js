@@ -1,6 +1,6 @@
 import $ from "jquery";
 import Swiper from "swiper";
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import LocomotiveScroll from "locomotive-scroll";
 
 
@@ -80,8 +80,14 @@ export function pageNav() {
 export function banner() {
 	const banner = new Swiper('.banner__container', {
 		loop: true,
-		modules: [Pagination],
+		speed: 800,
+		modules: [Pagination, Autoplay],
 		slidesPerView: 1,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
 		pagination: {
 			el: '.banner__pagination',
 			clickable: true,

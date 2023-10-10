@@ -30,7 +30,7 @@
 		border-radius: 0.625rem;
 		background: var(--white, #fcfcfc);
 		padding: 1.63rem;
-		min-height: 20rem;
+		min-height: 10rem;
 	}
 
 	&__close {
@@ -48,8 +48,8 @@
 			border-color: $yellow_color;
 			svg {
 				animation: modal 0.5s;
+				transition: $hover-transition;
 				path {
-					transition: $hover-transition;
 					fill: #fcfcfc;
 				}
 			}
