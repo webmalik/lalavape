@@ -124,42 +124,44 @@ function productsSlider() {
 
 
 export function tabs(container) {
+	if (container) {
+		document.addEventListener("DOMContentLoaded", function () {
+			const tabButtons = container.querySelectorAll(".tab__button");
+			const tabContents = container.querySelectorAll(".tab__content");
 
-	document.addEventListener("DOMContentLoaded", function () {
-		const tabButtons = container.querySelectorAll(".tab__button");
-		const tabContents = container.querySelectorAll(".tab__content");
-
-		tabButtons.forEach(function (button) {
-			button.addEventListener("click", function () {
-				const tabId = this.getAttribute("data-tab");
-				showTab(tabId);
-			});
-		});
-
-		function showTab(tabId) {
-			tabContents.forEach(function (content) {
-				if (content.getAttribute("data-tab") === tabId) {
-					content.classList.add("active");
-					content.style.display = "flex";
-				} else {
-					content.classList.remove("active");
-					content.style.display = "none";
-				}
-			});
 			tabButtons.forEach(function (button) {
-				if (button.getAttribute("data-tab") === tabId) {
-					button.classList.add("active");
-				} else {
-					button.classList.remove("active");
-				}
+				button.addEventListener("click", function () {
+					const tabId = this.getAttribute("data-tab");
+					showTab(tabId);
+				});
 			});
 
-			destr();
-			productsSlider();
-		}
+			function showTab(tabId) {
+				tabContents.forEach(function (content) {
+					if (content.getAttribute("data-tab") === tabId) {
+						content.classList.add("active");
+						content.style.display = "flex";
+					} else {
+						content.classList.remove("active");
+						content.style.display = "none";
+					}
+				});
+				tabButtons.forEach(function (button) {
+					if (button.getAttribute("data-tab") === tabId) {
+						button.classList.add("active");
+					} else {
+						button.classList.remove("active");
+					}
+				});
 
-		showTab(tabButtons[0].getAttribute("data-tab"));
-	});
+				destr();
+				productsSlider();
+			}
+
+			showTab(tabButtons[0].getAttribute("data-tab"));
+		});
+	}
+
 }
 
 export function rate() {
@@ -207,32 +209,35 @@ export function readMore() {
 	const textBlocks = document.querySelectorAll(".seo__block");
 	const showMoreLink = document.querySelector(".seo__all");
 	const container = document.querySelector(".seo__container");
-	let max = container.offsetHeight + 100;
+	if (container) {
+		let max = container.offsetHeight + 100;
 
-	let initialHeight = 0;
+		let initialHeight = 0;
 
-	for (let i = 0; i < 7; i++) {
-		initialHeight += textBlocks[i].offsetHeight;
+		for (let i = 0; i < 7; i++) {
+			initialHeight += textBlocks[i].offsetHeight;
+		}
+
+		container.style.maxHeight = initialHeight + "px";
+		let isOpen = true;
+
+		showMoreLink.addEventListener("click", function (event) {
+			event.preventDefault();
+
+			if (isOpen) {
+				container.style.maxHeight = max + "px";
+				isOpen = false;
+				showMoreLink.textContent = "приховати";
+				showMoreLink.classList.add('open');
+			} else {
+				container.style.maxHeight = initialHeight + "px";
+				isOpen = true;
+				showMoreLink.textContent = "читати далі";
+				showMoreLink.classList.remove('open');
+			}
+		});
 	}
 
-	container.style.maxHeight = initialHeight + "px";
-	let isOpen = true;
-
-	showMoreLink.addEventListener("click", function (event) {
-		event.preventDefault();
-
-		if (isOpen) {
-			container.style.maxHeight = max + "px";
-			isOpen = false;
-			showMoreLink.textContent = "приховати";
-			showMoreLink.classList.add('open');
-		} else {
-			container.style.maxHeight = initialHeight + "px";
-			isOpen = true;
-			showMoreLink.textContent = "читати далі";
-			showMoreLink.classList.remove('open');
-		}
-	});
 }
 
 export function locomotivescroll() {

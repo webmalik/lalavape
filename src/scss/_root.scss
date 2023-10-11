@@ -31,6 +31,18 @@ a {
 	font-style: normal;
 	font-weight: 600;
 	text-align: center;
+
+	&--middle {
+		@include adaptiv-value("font-size", toPX(1.375), toPX(1), 1);
+	}
+
+	&--small {
+		@include adaptiv-value("font-size", toPX(1.125), toPX(0.875), 1);
+	}
+
+	&--left {
+		text-align: left;
+	}
 }
 
 .button {

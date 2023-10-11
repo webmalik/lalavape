@@ -140,7 +140,7 @@
 		</div>
 	</div>
 </footer>
-<section class="modal active" data-modal="login">
+<section class="modal" data-modal="login">
 	<div class="modal__wrapper">
 		<div class="modal__container login">
 			<div class="login__buttons">
@@ -211,11 +211,13 @@
 						<input type="password" placeholder="Придумайте пароль">
 						<div class="login__control">
 							<input type="checkbox" name="reestr" id="reestr">
-							<label for="reestr">
+							<label class="login__conditions" for="reestr">
+								<span>
+									Реєструючись, ви погоджуєтеся з <a href="#"> умовами положення про обробку і захист
+										персональнихданих </a> та <a href="#">угодою користувача</a>
+								</span>
+
 							</label>
-							<a href="#" class="login__conditions">Реєструючись, ви погоджуєтеся з умовами положення про обробку
-								і захист персональних
-								даних та угодою користувача</a>
 						</div>
 						<input type="submit" class="login__submit button" value="Зареєструватись">
 					</form>

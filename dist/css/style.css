@@ -144,6 +144,13 @@ button {
 @font-face {
   font-family: "Inter";
   font-display: swap;
+  src: url("../fonts/Inter-400.woff") format("woff"), url("../fonts/Inter-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
   src: url("../fonts/Inter-300.woff") format("woff"), url("../fonts/Inter-300.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
@@ -158,27 +165,6 @@ button {
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-400.woff") format("woff"), url("../fonts/Inter-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
   src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
@@ -191,47 +177,17 @@ button {
   font-style: normal;
 }
 @font-face {
-  font-family: "Jost";
+  font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Jost-400.woff") format("woff"), url("../fonts/Jost-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Jost";
-  font-display: swap;
-  src: url("../fonts/Jost-400.woff") format("woff"), url("../fonts/Jost-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Jost";
-  font-display: swap;
-  src: url("../fonts/Jost-500.woff") format("woff"), url("../fonts/Jost-500.woff2") format("woff2");
+  src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "Jost";
+  font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Jost-500.woff") format("woff"), url("../fonts/Jost-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Jost";
-  font-display: swap;
-  src: url("../fonts/Jost-600.woff") format("woff"), url("../fonts/Jost-600.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Jost";
-  font-display: swap;
-  src: url("../fonts/Jost-600.woff") format("woff"), url("../fonts/Jost-600.woff2") format("woff2");
-  font-weight: 600;
-<<<<<<< HEAD
-=======
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -242,11 +198,52 @@ button {
   font-style: normal;
 }
 @font-face {
-  font-family: "Jost";
+  font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Jost-500.woff") format("woff"), url("../fonts/Jost-500.woff2") format("woff2");
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
   font-weight: 500;
->>>>>>> c6292b5f17c2607f30be3e14e79384734a254bcd
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 /*
@@ -280,11 +277,30 @@ a {
 
 .title {
   color: #2b2b2b;
-  font-family: "Jost", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
   text-align: center;
+}
+.title--middle {
+  font-size: 22px;
+}
+@media (max-width: 1160px) {
+  .title--middle {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 840));
+  }
+}
+.title--small {
+  font-size: 18px;
+}
+@media (max-width: 1160px) {
+  .title--small {
+    font-size: calc(14px + 4 * ((100vw - 320px) / 840));
+  }
+}
+.title--left {
+  text-align: left;
 }
 
 .button {
@@ -294,7 +310,7 @@ a {
   border: 2px solid #ffcb31;
   box-sizing: border-box;
   color: #2b2b2b;
-  font-family: "Jost", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
@@ -466,7 +482,7 @@ a {
   display: flex;
   align-items: center;
   color: #2b2b2b;
-  font-family: "Jost", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
@@ -651,7 +667,7 @@ a {
   align-items: center;
   justify-content: center;
   color: #2b2b2b;
-  font-family: "Jost", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
@@ -981,7 +997,7 @@ circle:nth-child(2n) {
 }
 .reviews__value {
   color: #2b2b2b;
-  font-family: "Jost", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
@@ -1062,7 +1078,7 @@ circle:nth-child(2n) {
 }
 .reviews__button {
   color: var(--grey, #2b2b2b);
-  font-family: "Jost", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 600;
@@ -1103,7 +1119,7 @@ circle:nth-child(2n) {
 }
 .about__header span {
   color: #2b2b2b;
-  font-family: "Jost", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
@@ -1112,6 +1128,18 @@ circle:nth-child(2n) {
 .about__icon {
   max-width: 1.5rem;
   max-height: 1.5rem;
+}
+.about__text {
+  color: #2b2b2b;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  border-radius: 0.625rem;
+  border: 1px solid var(--grey-3, #ddd);
+  padding: 1.87rem 2.81rem 1.87rem 1.87rem;
+  margin-top: 1.88rem;
 }
 .about__content {
   padding: 0 1.5rem;
@@ -1130,6 +1158,58 @@ circle:nth-child(2n) {
   padding-bottom: 1.5rem;
 }
 
+.about__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.about__item {
+  border-radius: 0.625rem;
+  background: var(--grey-4, #f3f3f3);
+  padding: 1.5rem;
+  color: #2b2b2b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.75rem;
+  box-sizing: border-box;
+}
+.about__page .about__title {
+  margin-bottom: 1.94rem;
+}
+.about__item--yellow {
+  background-color: #ffcb31;
+}
+.about__popular {
+  margin-top: 1.88rem;
+  margin-bottom: 6.25rem;
+}
+.about__sending {
+  margin-bottom: 6.25rem;
+}
+.about__contacts {
+  margin-top: 2.5rem;
+}
+.about__item--border {
+  border: 2px solid #ffcb31;
+  padding: calc(1.5rem - 2px);
+}
+.about__socials {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.81rem;
+  margin-bottom: 6.25rem;
+}
+.about__socials .about__title {
+  margin-bottom: 0;
+}
 .blog {
   margin-bottom: 6.25rem;
 }
@@ -1161,7 +1241,7 @@ circle:nth-child(2n) {
 }
 .blog__title--small {
   color: #2b2b2b;
-  font-family: "Jost", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
@@ -1289,7 +1369,7 @@ circle:nth-child(2n) {
 }
 .seo__title {
   color: #2b2b2b;
-  font-family: "Jost", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -1489,7 +1569,7 @@ circle:nth-child(2n) {
 }
 .footer__title {
   color: var(--white, #fcfcfc);
-  font-family: "Jost", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -1588,16 +1668,23 @@ html.lenis {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: visibility 0.8s ease-in-out;
+  transition: visibility 0.5s ease-in-out;
   visibility: hidden;
   pointer-events: none;
+}
+.modal .modal__container {
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
 }
 .modal.active {
   pointer-events: all;
   visibility: visible;
-  animation: modal 1s;
+  animation: modal 1.5s;
 }
 .modal.active .modal__close {
+  visibility: visible;
+}
+.modal.active .modal__container {
   visibility: visible;
 }
 .modal__wrapper {
@@ -1663,6 +1750,37 @@ html.lenis {
     transform: scale(0);
   }
 }
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.38rem;
+  padding: 1.42rem 0 3.75rem;
+}
+.breadcrumbs__select {
+  pointer-events: none;
+}
+.breadcrumbs__item {
+  color: var(--grey-2, #8b8b8b);
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 0.38rem;
+}
+.breadcrumbs__item:first-child::before {
+  content: "";
+}
+.breadcrumbs__item::before {
+  content: ">";
+}
+.breadcrumbs__home svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .login__buttons {
   display: flex;
   gap: 1.25rem;
@@ -1806,6 +1924,10 @@ html.lenis {
   font-weight: 300;
   line-height: 130%;
   padding-left: 0.5rem;
+}
+.login__conditions a {
+  display: inline;
+  text-decoration: underline;
 }
 
 @keyframes check {

@@ -165,6 +165,11 @@
 		font-weight: 300;
 		line-height: 130%;
 		padding-left: 0.5rem;
+
+		a {
+			display: inline;
+			text-decoration: underline;
+		}
 	}
 }
 

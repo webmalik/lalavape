@@ -17,7 +17,8 @@ $xl: 1440px;
 
 // Типографіка
 $font-family-inter: "Inter", sans-serif;
-$font-family-jost: "Jost", sans-serif;
+$font-family-montserrat: "Montserrat", sans-serif;
+$font-family-jost: $font-family-montserrat;
 $font-size: 16px;
 $line-height: 1.5;
 $color: #2b2b2b;

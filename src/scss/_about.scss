@@ -45,6 +45,19 @@
 		max-height: 1.5rem;
 	}
 
+	&__text {
+		color: $black_color;
+		font-family: $font-family-inter;
+		font-size: 1rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 130%;
+		border-radius: 0.625rem;
+		border: 1px solid var(--grey-3, #ddd);
+		padding: 1.87rem 2.81rem 1.87rem 1.87rem;
+		margin-top: 1.88rem;
+	}
+
 	&__content {
 		padding: 0 1.5rem;
 		color: $black_color;
@@ -61,5 +74,74 @@
 			padding-top: 1.38rem;
 			padding-bottom: 1.5rem;
 		}
+	}
+}
+
+.about {
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.25rem;
+	}
+
+	&__item {
+		border-radius: 0.625rem;
+		background: var(--grey-4, #f3f3f3);
+		padding: 1.5rem;
+		color: $black_color;
+		font-family: $font-family-montserrat;
+		font-size: 1.125rem;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 0%;
+
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		gap: 0.75rem;
+		box-sizing: border-box;
+	}
+
+	&__page {
+		.about__title {
+			margin-bottom: 1.94rem;
+		}
+	}
+
+	&__item--yellow {
+		background-color: $yellow_color;
+	}
+
+	&__popular {
+		margin-top: 1.88rem;
+		margin-bottom: 6.25rem;
+	}
+
+	&__sending {
+		margin-bottom: 6.25rem;
+	}
+
+	&__contacts {
+		margin-top: 2.5rem;
+	}
+
+	&__item--border {
+		border: 2px solid $yellow_color;
+		padding: calc(1.5rem - 2px);
+	}
+
+	&__socials {
+		margin-top: 3rem;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		gap: 0.81rem;
+		margin-bottom: 6.25rem;
+
+		.about__title {
+			margin-bottom: 0;
+		}
+	}
+	&__social {
 	}
 }
