@@ -1,0 +1,32 @@
+.certs {
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 3.75rem 1.25rem;
+		box-sizing: border-box;
+		padding: 2.62rem 0 6.25rem;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 1.5rem;
+		box-sizing: border-box;
+		a {
+			display: block;
+			padding: 1.25rem;
+			border-radius: 0.625rem;
+			border: 1px solid var(--grey-3, #ddd);
+		}
+	}
+
+	&__title {
+		color: $black_color;
+		font-family: $font-family-montserrat;
+		font-size: 0.9375rem;
+		font-style: normal;
+		font-weight: 700;
+	}
+}

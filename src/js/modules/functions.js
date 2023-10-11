@@ -2,8 +2,10 @@ import $ from "jquery";
 import Swiper from "swiper";
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import LocomotiveScroll from "locomotive-scroll";
+import { Fancybox } from "@fancyapps/ui";
 
 
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -38,6 +40,23 @@ export function burgerMenu() {
 export function sticky() {
 	window.addEventListener('scroll', function () {
 		$('header').toggleClass('sticky', window.scrollY > 0);
+	});
+}
+
+export function certs() {
+	Fancybox.bind('[data-fancybox="gallery"]', {
+		toolbar: "auto",
+		loop: true,
+		animationEffect: "zoom-in-out",
+		transitionEffect: "fade",
+		buttons: ["zoom", "slideShow", "fullScreen", "close"],
+		Thumbs: {
+			autoStart: true,
+			hideOnClose: true,
+		},
+		touch: {
+			vertical: false,
+		},
 	});
 }
 

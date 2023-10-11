@@ -158,6 +158,13 @@ button {
 @font-face {
   font-family: "Inter";
   font-display: swap;
+  src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
   src: url("../fonts/Inter-400.woff") format("woff"), url("../fonts/Inter-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -165,29 +172,15 @@ button {
 @font-face {
   font-family: "Inter";
   font-display: swap;
+  src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
   src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
   font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
-  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -207,13 +200,6 @@ button {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
   src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
@@ -228,8 +214,8 @@ button {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
@@ -244,6 +230,20 @@ button {
   font-display: swap;
   src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
   font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 /*
@@ -1210,6 +1210,16 @@ circle:nth-child(2n) {
 .about__socials .about__title {
   margin-bottom: 0;
 }
+.about__social {
+  display: flex;
+  align-items: center;
+  gap: 0.62rem;
+}
+.about__social a {
+  max-width: 2rem;
+  max-width: 2rem;
+}
+
 .blog {
   margin-bottom: 6.25rem;
 }
@@ -1951,4 +1961,32 @@ html.lenis {
   100% {
     transform: scale(1);
   }
+}
+.certs__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.75rem 1.25rem;
+  box-sizing: border-box;
+  padding: 2.62rem 0 6.25rem;
+}
+.certs__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-sizing: border-box;
+}
+.certs__item a {
+  display: block;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  border: 1px solid var(--grey-3, #ddd);
+}
+.certs__title {
+  color: #2b2b2b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
 }

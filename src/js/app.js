@@ -13,3 +13,4 @@ wmFunctions.accordion(false);
 wmFunctions.readMore();
 wmFunctions.locomotivescroll();
 wmFunctions.modal();
+wmFunctions.certs();

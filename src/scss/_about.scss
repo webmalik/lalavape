@@ -143,5 +143,13 @@
 		}
 	}
 	&__social {
+		display: flex;
+		align-items: center;
+		gap: 0.62rem;
+
+		a {
+			max-width: 2rem;
+			max-width: 2rem;
+		}
 	}
 }
