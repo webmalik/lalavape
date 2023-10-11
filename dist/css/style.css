@@ -314,11 +314,19 @@ a {
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 100%;
+  line-height: 0%;
   display: inline-block;
   outline: none;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
+}
+.button--border {
+  padding: calc(1.38rem - 2px);
+  border: 2px solid #ffcb31;
+  background-color: transparent;
+}
+.button--border.active, .button--border:hover {
+  background-color: #ffcb31;
 }
 
 .link__all {
@@ -1349,6 +1357,96 @@ circle:nth-child(2n) {
   font-weight: 600;
   line-height: 100%; /* 0rem */
   text-decoration-line: underline;
+}
+
+.blog__control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blog__buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.blog__button {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0%;
+}
+.blog__sort {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+.blog__sort .blog__title {
+  margin-bottom: 0;
+}
+.blog__sort select {
+  padding: 0.75rem;
+  padding-right: 2.25rem;
+  color: #2b2b2b;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 0.625rem;
+  border: 2px solid #ffcb31;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../img/select-2.svg");
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: right 12px center;
+}
+.blog__category {
+  padding: 2.5rem 0 6.25rem;
+}
+.blog__category .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.blog__pagination {
+  padding-top: 1.5rem;
+}
+.blog__pagination ul {
+  display: flex;
+  gap: 0.25rem;
+  justify-content: center;
+  align-items: center;
+}
+.blog__pagination ul li {
+  transition: all 0.3s ease-in-out;
+}
+.blog__pagination ul li a {
+  width: 2.125rem;
+  height: 2rem;
+  padding: 0.6875rem 0.625rem;
+  border-radius: 0.25rem;
+  border: 0.3px solid var(--grey-2, #8b8b8b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  color: #2b2b2b;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0%; /* 0rem */
+  transition: all 0.3s ease-in-out;
+}
+.blog__pagination ul li a.active, .blog__pagination ul li a:hover {
+  background: var(--grey-3, #ddd);
+  border-color: #ddd;
+}
+.blog__pagination ul li.active a {
+  background: var(--grey-3, #ddd);
+  border-color: #ddd;
 }
 
 .seo {

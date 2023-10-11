@@ -56,12 +56,23 @@ a {
 	font-size: 1.5rem;
 	font-style: normal;
 	font-weight: 600;
-	line-height: 100%;
+	line-height: 0%;
 	display: inline-block;
 	outline: none;
 
 	transition: all 0.5s ease-in-out;
 	cursor: pointer;
+
+	&--border {
+		padding: calc(1.38rem - 2px);
+		border: 2px solid $yellow_color;
+		background-color: transparent;
+
+		&.active,
+		&:hover {
+			background-color: $yellow_color;
+		}
+	}
 }
 
 .link {
