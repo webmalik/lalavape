@@ -2272,3 +2272,55 @@ html.lenis {
 .contacts .about__items {
   gap: 1.81rem 1.25rem;
 }
+
+.content__title {
+  color: #2b2b2b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 700;
+}
+.content__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.13rem;
+  padding-top: 2.62rem;
+  padding-bottom: 5rem;
+}
+.content__item h3 {
+  color: #2b2b2b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  padding-bottom: 0.69rem;
+}
+.content__item h4 {
+  color: #2b2b2b;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  padding: 1rem 0;
+}
+.content__item h4 span {
+  color: #ffcb31;
+}
+.content__item p {
+  color: #2b2b2b;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.content__item p a {
+  color: #2b2b2b;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  text-decoration: underline;
+}
