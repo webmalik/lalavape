@@ -2266,10 +2266,10 @@ html.lenis {
   line-height: 0%;
 }
 
-.contacts {
+.contacts__page {
   padding-bottom: 6.25rem;
 }
-.contacts .about__items {
+.contacts__page .about__items {
   gap: 1.81rem 1.25rem;
 }
 
