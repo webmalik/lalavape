@@ -1,0 +1,15 @@
+.grey {
+	color: var(--grey-2, #8b8b8b);
+	font-family: $font-family-montserrat;
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 0%;
+}
+.contacts {
+	padding-bottom: 6.25rem;
+
+	.about__items {
+		gap: 1.81rem 1.25rem;
+	}
+}
