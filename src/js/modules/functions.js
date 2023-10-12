@@ -158,11 +158,19 @@ export function tabs(container) {
 			function showTab(tabId) {
 				tabContents.forEach(function (content) {
 					if (content.getAttribute("data-tab") === tabId) {
-						content.classList.add("active");
+						content.style.opacity = 0;
 						content.style.display = "flex";
+						content.classList.add('active');
+						setTimeout(function () {
+							content.style.opacity = 1;
+						}, 50);
 					} else {
-						content.classList.remove("active");
+						content.style.opacity = 0;
 						content.style.display = "none";
+						setTimeout(function () {
+							content.classList.remove('active');
+							content.style.opacity = 0;
+						}, 50);
 					}
 				});
 				tabButtons.forEach(function (button) {
@@ -172,9 +180,11 @@ export function tabs(container) {
 						button.classList.remove("active");
 					}
 				});
+				setTimeout(function () {
+					destr();
+					productsSlider();
+				}, 60);
 
-				destr();
-				productsSlider();
 			}
 
 			showTab(tabButtons[0].getAttribute("data-tab"));

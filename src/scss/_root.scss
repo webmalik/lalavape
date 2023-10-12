@@ -75,6 +75,10 @@ a {
 	}
 }
 
+.tab__content {
+	transition: all 0.8s ease-in-out;
+}
+
 .link {
 	&__all {
 		position: absolute;
