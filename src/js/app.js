@@ -13,4 +13,5 @@ wmFunctions.accordion(false);
 wmFunctions.readMore();
 wmFunctions.locomotivescroll();
 wmFunctions.modal();
+wmFunctions.blogSlider();
 wmFunctions.certs();

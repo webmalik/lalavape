@@ -141,6 +141,21 @@ function productsSlider() {
 	}
 }
 
+export function blogSlider() {
+	const blogSwiper = new Swiper('.blog__slider', {
+		loop: true,
+		modules: [Navigation],
+		spaceBetween: 20,
+		slidesPerView: 5,
+		navigation: {
+			nextEl: '.blog__next',
+			prevEl: '.blog__prev',
+		},
+	});
+}
+
+
+
 
 export function tabs(container) {
 	if (container) {
