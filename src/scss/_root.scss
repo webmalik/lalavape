@@ -34,6 +34,7 @@ a {
 
 	&--middle {
 		@include adaptiv-value("font-size", toPX(1.375), toPX(1), 1);
+		font-weight: 700;
 	}
 
 	&--small {

@@ -148,6 +148,19 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		.blog__info {
+			gap: 2.5rem;
+			.blog__date,
+			.blog__likes,
+			.blog__views {
+				font-size: 0.875rem;
+				&::before {
+					min-width: 1.25rem;
+					min-height: 1.25rem;
+				}
+			}
+		}
 	}
 
 	&__buttons {
@@ -248,5 +261,8 @@
 				}
 			}
 		}
+	}
+	&__other {
+		margin-top: -2.5rem;
 	}
 }
