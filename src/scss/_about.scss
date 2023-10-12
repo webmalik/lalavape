@@ -33,9 +33,9 @@
 		span {
 			color: $black_color;
 			font-family: $font-family-jost;
-			font-size: 1.25rem;
+			font-size: 1.125rem;
 			font-style: normal;
-			font-weight: 600;
+			font-weight: 700;
 			line-height: 0%; /* 0rem */
 		}
 	}
@@ -71,7 +71,8 @@
 
 		&.active {
 			border-radius: 0 0 0.625rem 0.625rem;
-			padding-top: 1.38rem;
+			//padding-top: 1.38rem;
+			margin-top: -0.12rem;
 			padding-bottom: 1.5rem;
 		}
 	}
@@ -115,6 +116,10 @@
 	&__popular {
 		margin-top: 1.88rem;
 		margin-bottom: 6.25rem;
+
+		.popular__brand {
+			grid-template-columns: repeat(8, 1fr);
+		}
 	}
 
 	&__sending {
