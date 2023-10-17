@@ -1,0 +1,40 @@
+.page-not-found {
+	&__wrapper {
+		padding-bottom: 5rem;
+		padding-top: 6.3rem;
+	}
+
+	&__head {
+		display: flex;
+		align-items: start;
+		justify-content: center;
+		gap: 1.5rem;
+		span {
+			color: $black_color;
+			font-family: $font-family-inter;
+			font-size: 18.75rem;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 115%;
+			text-transform: uppercase;
+		}
+	}
+
+	&__description {
+		color: $black_color;
+		font-family: $font-family-inter;
+		font-size: 1rem;
+		font-style: normal;
+		font-weight: 400;
+		text-align: center;
+		margin-top: -5rem;
+	}
+
+	&__button {
+		margin-top: 3.75rem;
+		display: inline-block;
+		line-height: 100%;
+		margin-left: 50%;
+		transform: translateX(-50%);
+	}
+}
