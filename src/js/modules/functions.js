@@ -351,3 +351,46 @@ export function modal() {
 	});
 
 }
+
+export function dropFile() {
+	const dropArea = document.getElementById('drop-area');
+	const fileInput = document.getElementById('file-input');
+	const imagePreview = document.getElementById('image-preview');
+
+	dropArea.addEventListener('dragover', function (e) {
+		e.preventDefault();
+		dropArea.classList.add('dragover');
+	});
+
+	dropArea.addEventListener('dragleave', function () {
+		dropArea.classList.remove('dragover');
+	});
+
+	dropArea.addEventListener('drop', function (e) {
+		e.preventDefault();
+		dropArea.classList.remove('dragover');
+
+		const files = e.dataTransfer.files;
+		handleFiles(files);
+	});
+
+	fileInput.addEventListener('change', function () {
+		const files = fileInput.files;
+		handleFiles(files);
+	});
+
+	function handleFiles(files) {
+		for (const file of files) {
+			if (file.type.startsWith('image/') && file.size <= 5 * 1024 * 1024) {
+				const image = document.createElement('img');
+				image.src = URL.createObjectURL(file);
+				image.className = 'preview-image';
+				imagePreview.appendChild(image);
+			} else if (file.size > 5 * 1024 * 1024) {
+				alert('Розмір файлу перевищує 5 МБ: ' + file.name);
+			} else {
+				alert('Файл не є зображенням: ' + file.name);
+			}
+		}
+	}
+}
