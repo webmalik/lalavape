@@ -261,7 +261,7 @@
 	& .add {
 		&__form {
 			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: 2fr 2fr 1fr;
 			gap: 2.5rem;
 			justify-content: space-between;
 		}
@@ -280,6 +280,11 @@
 			gap: 3.13rem;
 			justify-content: start;
 			align-items: center;
+		}
+
+		&__input {
+			min-width: 18.75rem;
+			width: 100%;
 		}
 
 		&__text {

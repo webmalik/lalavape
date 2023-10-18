@@ -137,6 +137,13 @@ button {
 @font-face {
   font-family: "Inter";
   font-display: swap;
+  src: url("../fonts/Inter-300.woff") format("woff"), url("../fonts/Inter-300.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
   src: url("../fonts/Inter-400.woff") format("woff"), url("../fonts/Inter-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -151,8 +158,8 @@ button {
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
-  font-weight: 500;
+  src: url("../fonts/Inter-400.woff") format("woff"), url("../fonts/Inter-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -172,29 +179,15 @@ button {
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-400.woff") format("woff"), url("../fonts/Inter-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
   src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
   font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-300.woff") format("woff"), url("../fonts/Inter-300.woff2") format("woff2");
-  font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
-  font-weight: 500;
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -208,6 +201,13 @@ button {
   font-family: "Montserrat";
   font-display: swap;
   src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -235,15 +235,15 @@ button {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 /*
@@ -2763,7 +2763,7 @@ html.lenis {
 }
 .add__page .add__form {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr 1fr;
   gap: 2.5rem;
   justify-content: space-between;
 }
@@ -2779,6 +2779,10 @@ html.lenis {
   gap: 3.13rem;
   justify-content: start;
   align-items: center;
+}
+.add__page .add__input {
+  min-width: 18.75rem;
+  width: 100%;
 }
 .add__page .add__text {
   width: 100%;
