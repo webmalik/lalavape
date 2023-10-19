@@ -47,11 +47,11 @@
 	}
 }
 
-@include media-width($md) {
+@include media-width($sm) {
 	.banner {
 		&__slide {
 			img {
-				max-height: 25rem;
+				@include adaptiv-value("max-height", toPX(40), toPX(25), 1);
 				width: auto;
 				height: 100%;
 				min-width: auto;
