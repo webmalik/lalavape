@@ -43,9 +43,11 @@
 @include media-width($md) {
 	.popular {
 		&__brand {
-			padding-bottom: 1rem;
 			overflow-x: scroll;
 			overflow-y: hidden;
+			&::-webkit-scrollbar {
+				display: none;
+			}
 		}
 	}
 }

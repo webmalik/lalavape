@@ -131,7 +131,7 @@ function productsSlider() {
 		productsSwiper = new Swiper(activeTab, {
 			loop: true,
 			modules: [Navigation],
-			spaceBetween: 20,
+			spaceBetween: 9,
 			slidesPerView: 2,
 			navigation: {
 				nextEl: '.products__next',
@@ -141,15 +141,19 @@ function productsSlider() {
 			breakpoints: {
 				1200: {
 					slidesPerView: 5,
+					spaceBetween: 20,
 				},
 				1000: {
 					slidesPerView: 4,
+					spaceBetween: 15,
 				},
 				767: {
 					slidesPerView: 4,
+					spaceBetween: 12,
 				},
 				520: {
 					slidesPerView: 3,
+					spaceBetween: 10,
 				}
 			}
 		});

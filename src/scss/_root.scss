@@ -27,7 +27,7 @@ a {
 .title {
 	color: $black_color;
 	font-family: $font-family-jost;
-	font-size: 1.375rem;
+	@include adaptiv-value("font-size", toPX(1.375), toPX(1.25), 1);
 	font-style: normal;
 	font-weight: 700;
 	text-align: center;
@@ -92,11 +92,19 @@ a {
 		right: 0;
 		color: var(--grey-2, #8b8b8b);
 		font-family: $font-family-inter;
-		font-size: 1rem;
+		@include adaptiv-value("font-size", toPX(1), toPX(0.75), 1);
 		font-style: normal;
 		font-weight: 500;
 		line-height: 130%; /* 1.3rem */
 		text-decoration-line: underline;
+	}
+}
+
+@include media-width($md) {
+	.link {
+		&__all {
+			position: relative;
+		}
 	}
 }
 
