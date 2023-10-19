@@ -10,6 +10,7 @@ wmFunctions.tabs(login);
 
 wmFunctions.rate();
 wmFunctions.accordion(false);
+wmFunctions.accordionMobile(false);
 wmFunctions.dropFile();
 wmFunctions.readMore();
 wmFunctions.locomotivescroll();

@@ -102,11 +102,11 @@ export function banner() {
 		speed: 800,
 		modules: [Pagination, Autoplay],
 		slidesPerView: 1,
-		// autoplay: {
-		// 	delay: 3000,
-		// 	disableOnInteraction: false,
-		// 	pauseOnMouseEnter: true,
-		// },
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
 		pagination: {
 			el: '.banner__pagination',
 			clickable: true,
@@ -261,6 +261,33 @@ export function accordion(mode = true) {
 			content.classList.toggle('active');
 		});
 	});
+}
+
+export function accordionMobile(mode = true) {
+	const accordionTriggers = document.querySelectorAll('.accordion-trigger-mobile');
+	if (window.innerWidth < 767) {
+		accordionTriggers.forEach(trigger => {
+			trigger.addEventListener('click', () => {
+				if (mode) {
+					// Закрити всі аккордеони, крім того, який був клікнутий
+					accordionTriggers.forEach(otherTrigger => {
+						if (otherTrigger !== trigger) {
+							otherTrigger.classList.remove('active');
+							const otherContent = otherTrigger.nextElementSibling;
+							let parentContainer = otherTrigger.parentNode.parentNode;
+							otherContent.classList.remove('active');
+						}
+					});
+				}
+
+				trigger.classList.toggle('active');
+
+				const content = trigger.nextElementSibling;
+
+				content.classList.toggle('active');
+			});
+		});
+	}
 }
 
 export function readMore() {

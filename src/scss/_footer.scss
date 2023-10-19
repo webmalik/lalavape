@@ -15,6 +15,7 @@
 
 	&__logo {
 		display: block;
+		@include adaptiv-value("max-width", toPX(5.625), toPX(2.5), 1);
 		picture,
 		img {
 			width: 100%;
@@ -29,7 +30,7 @@
 		gap: 0.5rem;
 		color: var(--white, #fcfcfc);
 		font-family: $font-family-inter;
-		@include adaptiv-value("font-size", toPX(0.625), toPX(0.5), 1);
+		@include adaptiv-value("font-size", toPX(0.625), toPX(0.75), 1);
 		font-style: normal;
 		font-weight: 400;
 		line-height: 130%;
@@ -48,10 +49,18 @@
 	&__copy {
 		color: var(--grey-2, #8b8b8b);
 		font-family: $font-family-inter;
-		@include adaptiv-value("font-size", toPX(0.625), toPX(0.5), 1);
+		@include adaptiv-value("font-size", toPX(0.625), toPX(0.625), 1);
 		font-style: normal;
 		font-weight: 400;
 		line-height: 130%; /* 0.8125rem */
+
+		&.mobile {
+			display: none;
+		}
+
+		&.desctop {
+			display: block;
+		}
 	}
 
 	&__menu {
@@ -68,12 +77,12 @@
 		ul {
 			display: flex;
 			flex-direction: column;
-			@include adaptiv-value("gap", toPX(1.25), toPX(0.5), 1);
+			@include adaptiv-value("gap", toPX(1.25), toPX(0.88), 1);
 			li {
 				a {
 					color: var(--grey-2, #8b8b8b);
 					font-family: $font-family-inter;
-					@include adaptiv-value("font-size", toPX(0.875), toPX(0.5), 1);
+					@include adaptiv-value("font-size", toPX(0.875), toPX(0.75), 1);
 					font-style: normal;
 					font-weight: 400;
 					line-height: 0%; /* 0rem */
@@ -85,7 +94,7 @@
 	&__title {
 		color: var(--white, #fcfcfc);
 		font-family: $font-family-jost;
-		@include adaptiv-value("font-size", toPX(1.5), toPX(1), 1);
+		@include adaptiv-value("font-size", toPX(1.5), toPX(1.25), 1);
 		font-style: normal;
 		font-weight: 600;
 	}
@@ -118,7 +127,7 @@
 		a {
 			color: var(--white, #fcfcfc);
 			font-family: $font-family-inter;
-			@include adaptiv-value("font-size", toPX(0.875), toPX(0.5), 1);
+			@include adaptiv-value("font-size", toPX(0.875), toPX(0.75), 1);
 			font-style: normal;
 			font-weight: 400;
 			line-height: normal;
@@ -130,13 +139,100 @@
 		align-items: center;
 		justify-content: start;
 		gap: 0.62rem;
+
+		a {
+			svg {
+				@include adaptiv-value("width", toPX(2), toPX(1.5), 1);
+				@include adaptiv-value("height", toPX(2), toPX(1.5), 1);
+			}
+		}
+	}
+}
+
+@include media-width($md) {
+	.footer {
+		&__nav,
+		&__contacts {
+			padding-top: 0;
+		}
+		&__container {
+			grid-template-columns: 1fr;
+		}
+		&__menu {
+			flex-direction: row;
+		}
+
+		&__info {
+			flex-direction: row;
+		}
+
+		&__copy {
+			&.desctop {
+				display: none;
+			}
+
+			&.mobile {
+				display: block;
+				text-align: center;
+			}
+		}
 	}
 }
 
 @include media-width($sm) {
 	.footer {
+		&__nav,
+		&__contacts {
+			padding-top: 0;
+		}
+
+		&__title {
+			font-size: 1.25rem;
+
+			&.accordion-trigger-mobile {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				transition: $hover-transition;
+
+				&::after {
+					content: "";
+					display: block;
+					width: 1.375rem;
+					height: 1.375rem;
+					background-image: url("../img/AD_footer.svg");
+					background-repeat: no-repeat;
+					background-size: cover;
+					transition: $hover-transition;
+				}
+
+				&.active {
+					&::after {
+						transform: rotate(-180deg);
+					}
+				}
+			}
+		}
+		&__container {
+			grid-template-columns: 1fr;
+		}
 		&__menu {
 			flex-direction: column;
+		}
+
+		&__info {
+			flex-direction: row;
+		}
+
+		&__copy {
+			&.desctop {
+				display: none;
+			}
+
+			&.mobile {
+				display: block;
+				text-align: center;
+			}
 		}
 	}
 }
