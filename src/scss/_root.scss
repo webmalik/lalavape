@@ -121,3 +121,28 @@ a {
 	max-width: $container-width;
 	margin: 0 auto;
 }
+
+@include media-width(1300px) {
+	.container {
+		max-width: 1000px;
+	}
+}
+
+@include media-width(1100px) {
+	.container {
+		max-width: 940px;
+	}
+}
+
+@include media-width($md) {
+	.container {
+		max-width: 767px;
+	}
+}
+
+@include media-width($sm) {
+	.container {
+		max-width: none;
+		padding: 0 1.25rem;
+	}
+}

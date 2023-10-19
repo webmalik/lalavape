@@ -362,3 +362,11 @@ circle:nth-child(2n) {
 		}
 	}
 }
+
+@include media-width($sm) {
+	.reviews {
+		&__container {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}

@@ -359,3 +359,13 @@
 		gap: 0.75rem;
 	}
 }
+
+@include media-width($md) {
+	.blog {
+		&__container {
+			overflow-x: scroll;
+			overflow-y: hidden;
+			padding-bottom: 1rem;
+		}
+	}
+}

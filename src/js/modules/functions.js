@@ -102,11 +102,11 @@ export function banner() {
 		speed: 800,
 		modules: [Pagination, Autoplay],
 		slidesPerView: 1,
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false,
-			pauseOnMouseEnter: true,
-		},
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: false,
+		// 	pauseOnMouseEnter: true,
+		// },
 		pagination: {
 			el: '.banner__pagination',
 			clickable: true,
@@ -132,11 +132,26 @@ function productsSlider() {
 			loop: true,
 			modules: [Navigation],
 			spaceBetween: 20,
-			slidesPerView: 5,
+			slidesPerView: 2,
 			navigation: {
 				nextEl: '.products__next',
 				prevEl: '.products__prev',
 			},
+
+			breakpoints: {
+				1200: {
+					slidesPerView: 5,
+				},
+				1000: {
+					slidesPerView: 4,
+				},
+				767: {
+					slidesPerView: 4,
+				},
+				520: {
+					slidesPerView: 3,
+				}
+			}
 		});
 	}
 }

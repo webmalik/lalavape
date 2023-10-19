@@ -75,6 +75,10 @@
 		background-color: $black_color;
 	}
 
+	&__mobile-button {
+		display: none;
+	}
+
 	&__container {
 		display: flex;
 		padding: 2rem 0;
@@ -179,6 +183,10 @@
 		max-width: 26.25rem;
 		box-sizing: border-box;
 
+		&-mobile {
+			display: none;
+		}
+
 		input {
 			border: none;
 			outline: none;
@@ -215,12 +223,6 @@
 		display: flex;
 		align-items: center;
 		gap: 1.5rem;
-	}
-
-	&__favorite {
-	}
-
-	&__account {
 	}
 
 	&__basket {
@@ -303,5 +305,342 @@
 		}
 	}
 }
-.button {
+
+@include media-width(1300px) {
+	.header {
+		&__list {
+			gap: 1.5rem;
+		}
+	}
+}
+
+@include media-width($md) {
+	.catalog {
+		&__dropdown {
+			display: block;
+			position: absolute;
+			top: 3.5rem;
+			padding-top: 1.25rem;
+			left: 0;
+			z-index: 3;
+		}
+		&__dropdown-list {
+			border-radius: 0.625rem;
+			border: 1px solid $yellow_color;
+			background: #f3f3f3;
+			//padding: 1.5rem;
+			padding: 0 1.5rem;
+			border-width: 0px;
+			max-height: 0rem;
+			width: 100%;
+			overflow: hidden;
+			transition: $hover-transition;
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				// gap: 1.25rem;
+
+				li {
+					padding: 0.75rem 0;
+
+					&:first-child {
+						padding: 0 0 0.75rem;
+					}
+
+					&:last-child {
+						padding: 0.75rem 0 0;
+					}
+					a {
+						display: flex;
+						align-items: center;
+						gap: 0.38rem;
+						color: $black_color;
+						font-family: $font-family-inter;
+						font-size: 0.875rem;
+						font-style: normal;
+						font-weight: 300;
+						&::after {
+							content: "";
+							display: block;
+							background-image: url("../img/arrow-right.svg");
+							background-repeat: no-repeat;
+							background-position: center;
+							background-size: cover;
+							min-width: 0.625rem;
+							min-height: 0.625rem;
+						}
+					}
+
+					&:hover {
+						a {
+							font-weight: 500;
+							&::after {
+								background-image: url("../img/arrow-right-hover.svg");
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.header {
+		&__contacts {
+			display: flex;
+			align-items: center;
+			gap: 1.5rem;
+		}
+
+		&__menu {
+			display: flex;
+			align-items: center;
+		}
+
+		&__list {
+			gap: 1rem;
+			li {
+				a {
+					font-size: 0.75rem;
+				}
+
+				&:hover a {
+					color: $yellow_color;
+					transition: $hover-transition;
+				}
+			}
+		}
+
+		.navigations__wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 100%;
+			padding: 1.62rem 0;
+		}
+
+		&__logo {
+			max-width: 5.625rem;
+			width: 5.625rem;
+			min-height: 5.64113rem;
+			display: block;
+
+			picture,
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__button {
+			position: relative;
+			display: flex;
+			align-items: center;
+			color: $black_color;
+			font-family: $font-family-jost;
+			@include adaptiv-value("font-size", toPX(1.1), toPX(0.75), 1);
+			font-style: normal;
+			font-weight: 600;
+			gap: 0.62rem;
+			border-radius: 0.625rem;
+			border: 2px solid $yellow_color;
+			padding: 1rem 0.94rem;
+			cursor: pointer;
+			transition: $hover-transition;
+
+			p {
+				padding-right: 0.38rem;
+			}
+
+			&:hover {
+				& .catalog__dropdown-list {
+					padding: 1.5rem 1.5rem;
+					border-width: 1px;
+					max-height: 30rem;
+					transition: $hover-transition;
+				}
+			}
+		}
+
+		&__search {
+			@include adaptiv-value("max-width", toPX(20), toPX(5), 1);
+
+			input {
+			}
+			a {
+			}
+		}
+
+		&__icons {
+			display: flex;
+			align-items: center;
+			gap: 1.5rem;
+		}
+
+		&__basket {
+			position: relative;
+			display: flex;
+			z-index: 1;
+		}
+
+		&__counter {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: -0.3rem;
+			right: -0.3rem;
+			min-width: 1rem;
+			min-height: 1rem;
+			border-radius: 100%;
+			background-color: $black_color;
+			color: $white_color;
+			font-family: $font-family-inter;
+			font-size: 0.6rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			z-index: 2;
+		}
+	}
+
+	.contacts {
+		&__item {
+			display: flex;
+			align-items: center;
+			gap: 0.38rem;
+
+			p {
+				color: $white_color;
+				font-family: $font-family-inter;
+				font-size: 0.75rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 0%; /* 0rem */
+				transition: $hover-transition;
+			}
+
+			&:hover p {
+				color: $yellow_color;
+			}
+		}
+
+		&__telegram,
+		&__viber {
+			p {
+				display: none;
+			}
+		}
+
+		&__wrapper {
+			display: flex;
+			align-items: center;
+			gap: 1.13rem;
+		}
+	}
+	.menu-item-has-children {
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 0.25rem;
+
+			&::after {
+				content: "";
+				display: block;
+				background-image: url("../img/Arrow_Down.svg");
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				transition: $hover-transition;
+				min-width: 0.75rem;
+				min-height: 0.75rem;
+			}
+		}
+
+		&:hover a {
+			&::after {
+				background-image: url("../img/Arrow_Down_Hover.svg");
+			}
+		}
+	}
+}
+
+@include media-width($sm) {
+	.header {
+		.navigations__wrapper {
+			padding: 0;
+		}
+		&__container {
+			padding: 1.06rem 0;
+		}
+		&__contacts {
+			width: 100%;
+			justify-content: space-between;
+		}
+		&__list {
+			display: none;
+		}
+
+		&__mobile-button {
+			display: block;
+		}
+		&__button {
+			display: none;
+		}
+
+		&__search {
+			display: none;
+			&-mobile {
+				display: block;
+			}
+		}
+
+		&__mobile-wrapper {
+			display: flex;
+			align-items: center;
+		}
+
+		&__account,
+		&__basket,
+		&__favorite {
+			svg {
+				width: 22px;
+				height: 22px;
+			}
+		}
+
+		&__counter {
+			min-width: 0.6875rem;
+			min-height: 0.6875rem;
+			font-size: 0.4125rem;
+		}
+	}
+	.contacts {
+		&__item {
+			p {
+				font-size: 0.5rem;
+			}
+
+			img,
+			svg {
+				width: 0.625rem;
+				height: 0.625rem;
+			}
+		}
+
+		&__wrapper {
+			gap: 0.63rem;
+		}
+
+		&__telegram,
+		&__viber {
+			img,
+			svg {
+				width: 0.75rem;
+				height: 0.75rem;
+			}
+		}
+	}
 }

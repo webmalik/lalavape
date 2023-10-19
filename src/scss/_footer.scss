@@ -132,3 +132,11 @@
 		gap: 0.62rem;
 	}
 }
+
+@include media-width($sm) {
+	.footer {
+		&__menu {
+			flex-direction: column;
+		}
+	}
+}

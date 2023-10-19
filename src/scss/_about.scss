@@ -158,3 +158,19 @@
 		}
 	}
 }
+
+@include media-width($md) {
+	.about {
+		&__container {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+@include media-width($sm) {
+	.about {
+		&__container {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}

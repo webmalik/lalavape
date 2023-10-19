@@ -69,3 +69,27 @@
 		cursor: pointer;
 	}
 }
+
+@include media-width(1170px) {
+	.products {
+		&__next {
+			right: -2rem;
+		}
+
+		&__prev {
+			left: -2rem;
+		}
+	}
+}
+
+@include media-width($sm) {
+	.products {
+		&__next {
+			display: none;
+		}
+
+		&__prev {
+			display: none;
+		}
+	}
+}
