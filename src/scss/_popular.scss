@@ -14,20 +14,23 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		flex-wrap: nowrap;
 		color: $black_color;
 		font-family: $font-family-jost;
-		font-size: 1.125rem;
+		@include adaptiv-value("font-size", toPX(1.125), toPX(0.875), 1);
+		//font-size: 1.125rem;
 		font-style: normal;
 		font-weight: 700;
 		text-align: center;
+		line-height: 0;
 		text-transform: uppercase;
 		border-radius: 0.625rem;
 		border: 2px solid $black_color;
 		background: #f3f3f3;
-		padding: 1.25rem 0;
+		padding: 1.25rem;
 		box-sizing: border-box;
 		text-decoration: none;
-
+		white-space: nowrap;
 		transition: $hover-transition;
 
 		&:hover {

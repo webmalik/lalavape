@@ -33,7 +33,7 @@ a {
 	text-align: center;
 
 	&--middle {
-		@include adaptiv-value("font-size", toPX(1.375), toPX(1), 1);
+		@include adaptiv-value("font-size", toPX(1.375), toPX(1.25), 1);
 		font-weight: 700;
 	}
 
@@ -42,6 +42,12 @@ a {
 	}
 
 	&--left {
+		text-align: left;
+	}
+}
+
+@include media-width($md) {
+	.title {
 		text-align: left;
 	}
 }
