@@ -188,9 +188,6 @@ export function blogSlider() {
 	});
 }
 
-
-
-
 export function tabs(container) {
 	if (container) {
 		document.addEventListener("DOMContentLoaded", function () {
