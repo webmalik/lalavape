@@ -1,7 +1,7 @@
 .about {
-	margin-bottom: 6.25rem;
+	@include adaptiv-value("margin-bottom", toPX(6.25), toPX(3.75), 1);
 	&__title {
-		margin-bottom: 2.5rem;
+		@include adaptiv-value("margin-bottom", toPX(2.5), toPX(1.88), 1);
 	}
 
 	&__container {
@@ -33,7 +33,7 @@
 		span {
 			color: $black_color;
 			font-family: $font-family-jost;
-			font-size: 1.125rem;
+			@include adaptiv-value("font-size", toPX(1.125), toPX(0.875), 1);
 			font-style: normal;
 			font-weight: 700;
 			line-height: 0%; /* 0rem */
@@ -41,8 +41,8 @@
 	}
 
 	&__icon {
-		max-width: 1.5rem;
-		max-height: 1.5rem;
+		@include adaptiv-value("max-width", toPX(1.5), toPX(1.375), 1);
+		@include adaptiv-value("max-height", toPX(1.5), toPX(1.375), 1);
 	}
 
 	&__text {
@@ -161,6 +161,11 @@
 
 @include media-width($md) {
 	.about {
+		&__title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 		&__container {
 			grid-template-columns: repeat(2, 1fr);
 		}

@@ -1,13 +1,13 @@
 .blog {
-	margin-bottom: 6.25rem;
+	@include adaptiv-value("margin-bottom", toPX(6.25), toPX(3.75), 1);
 	&__title {
-		margin-bottom: 2.5rem;
+		@include adaptiv-value("margin-bottom", toPX(2.5), toPX(1.88), 1);
 	}
 
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: 1.25rem;
+		@include adaptiv-value("gap", toPX(1.25), toPX(0.62), 1);
 	}
 
 	&__card {
@@ -15,12 +15,15 @@
 	}
 
 	&__image--small {
-		border-radius: 0.625rem;
 		overflow: hidden;
 		margin-bottom: 1.12rem;
 		height: 100%;
-		max-height: 12.5rem;
-		display: block;
+		@include adaptiv-value("border-radius", toPX(0.625), toPX(0.375), 1);
+		@include adaptiv-value("max-height", toPX(12.5), toPX(8.125), 1);
+		@include adaptiv-value("max-width", toPX(17.2), toPX(9.6875), 1);
+		display: flex;
+		align-items: center;
+		overflow: hidden;
 
 		picture,
 		img {
@@ -34,18 +37,17 @@
 	&__title--small {
 		color: $black_color;
 		font-family: $font-family-jost;
-		font-size: 1.25rem;
+		@include adaptiv-value("font-size", toPX(1.125), toPX(0.75), 1);
 		font-style: normal;
-		font-weight: 600;
+		font-weight: 700;
 		line-height: 130%;
-		margin-bottom: 1rem;
 		display: block;
 	}
 
 	&__description {
 		color: var(--grey-2, #8b8b8b);
 		font-family: $font-family-inter;
-		font-size: 0.875rem;
+		@include adaptiv-value("font-size", toPX(0.875), toPX(0.5), 1);
 		font-style: normal;
 		font-weight: 400;
 		line-height: 130%;
@@ -56,7 +58,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: start;
-		gap: 1.62rem;
+		@include adaptiv-value("gap", toPX(1.62), toPX(0.5), 1);
 		margin-bottom: 1.25rem;
 	}
 
@@ -67,7 +69,7 @@
 		gap: 0.38rem;
 		color: var(--grey-2, #8b8b8b);
 		font-family: $font-family-inter;
-		font-size: 0.75rem;
+		@include adaptiv-value("font-size", toPX(0.75), toPX(0.5), 1);
 		font-style: normal;
 		font-weight: 400;
 		line-height: 0%; /* 0rem */
@@ -91,7 +93,7 @@
 		gap: 0.38rem;
 		color: var(--grey-2, #8b8b8b);
 		font-family: $font-family-inter;
-		font-size: 0.75rem;
+		@include adaptiv-value("font-size", toPX(0.75), toPX(0.5), 1);
 		font-style: normal;
 		font-weight: 400;
 		line-height: 0%; /* 0rem */
@@ -115,7 +117,7 @@
 		gap: 0.38rem;
 		color: var(--grey-2, #8b8b8b);
 		font-family: $font-family-inter;
-		font-size: 0.75rem;
+		@include adaptiv-value("font-size", toPX(0.75), toPX(0.5), 1);
 		font-style: normal;
 		font-weight: 400;
 		line-height: 0%; /* 0rem */
@@ -135,7 +137,7 @@
 	&__read-more {
 		color: $black_color;
 		font-family: $font-family-inter;
-		font-size: 0.75rem;
+		@include adaptiv-value("font-size", toPX(0.75), toPX(0.5), 1);
 		font-style: normal;
 		font-weight: 600;
 		line-height: 100%; /* 0rem */
@@ -362,10 +364,17 @@
 
 @include media-width($md) {
 	.blog {
+		&__title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 		&__container {
 			overflow-x: scroll;
 			overflow-y: hidden;
-			padding-bottom: 1rem;
+			&::-webkit-scrollbar {
+				display: none;
+			}
 		}
 	}
 }

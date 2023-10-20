@@ -1,5 +1,5 @@
 .products {
-	margin-top: 5rem;
+	@include adaptiv-value("margin-top", toPX(5), toPX(3.75), 1);
 
 	&__nav {
 		display: flex;
@@ -7,7 +7,7 @@
 		align-items: center;
 		justify-content: center;
 		gap: 1.5rem;
-		margin-bottom: 2.5rem;
+		@include adaptiv-value("margin-bottom", toPX(2.5), toPX(1.88), 1);
 	}
 
 	&__button {
@@ -39,7 +39,7 @@
 
 	&__wrapper {
 		position: relative;
-		margin-bottom: 6.25rem;
+		@include adaptiv-value("margin-bottom", toPX(6.25), toPX(3.75), 1);
 	}
 
 	&__slider {
@@ -68,6 +68,21 @@
 		margin: auto;
 		cursor: pointer;
 	}
+	&__paginations {
+		display: none;
+	}
+}
+
+@include media-width(1220px) {
+	.products {
+		&__next {
+			right: -3rem;
+		}
+
+		&__prev {
+			left: -3rem;
+		}
+	}
 }
 
 @include media-width(1170px) {
@@ -82,10 +97,26 @@
 	}
 }
 
+@include media-width(1120px) {
+	.products {
+		&__next {
+			right: -1.7rem;
+		}
+
+		&__prev {
+			left: -1.7rem;
+		}
+	}
+}
+
 @include media-width($md) {
 	.products {
-		margin-top: 3.75rem;
 		position: relative;
+		&__title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 		&__button {
 			padding: 0.75rem 0.9rem;
 		}
@@ -103,6 +134,43 @@
 			bottom: 2.22rem;
 			top: auto;
 			transform: translateY(-50%);
+		}
+		&__next {
+			display: none;
+		}
+
+		&__prev {
+			display: none;
+		}
+		&__paginations {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 1.25rem;
+			position: absolute;
+			top: -3.7rem !important;
+			bottom: auto !important;
+			left: 6rem !important;
+			right: 15rem !important;
+			padding-left: 3.7rem;
+			.swiper-pagination-bullet {
+				min-width: 0.625rem;
+				min-height: 0.625rem;
+				border-radius: 0.1875rem;
+				border: 2px solid $yellow_color;
+				opacity: 1;
+				background: none;
+				transition: all 0.5s ease-in-out;
+
+				&-active {
+					min-width: 0.625rem;
+					min-height: 0.625rem;
+					border-radius: 0.1875rem;
+					background: $yellow_color;
+					border: 2px solid $yellow_color;
+					transition: all 0.5s ease-in-out;
+				}
+			}
 		}
 	}
 }

@@ -176,6 +176,78 @@ button {
 }
 
 @font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Inter";
   font-display: swap;
   src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
@@ -188,78 +260,6 @@ button {
   font-display: swap;
   src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
   font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
-  font-weight: 700;
   font-style: normal;
 }
 
@@ -776,7 +776,7 @@ a {
 }
 
 .products {
-  margin-top: 5rem;
+  margin-top: 80px;
 }
 
 .products__nav {
@@ -785,7 +785,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px;
 }
 
 .products__button {
@@ -818,7 +818,7 @@ a {
 
 .products__wrapper {
   position: relative;
-  margin-bottom: 6.25rem;
+  margin-bottom: 100px;
 }
 
 .products__slider {
@@ -843,6 +843,10 @@ a {
   top: 50%;
   margin: auto;
   cursor: pointer;
+}
+
+.products__paginations {
+  display: none;
 }
 
 .card {
@@ -1087,12 +1091,12 @@ circle:nth-child(2n) {
 }
 
 .reviews {
-  margin-bottom: 6.25rem;
+  margin-bottom: 100px;
 }
 
 .reviews__title {
   position: relative;
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px;
 }
 
 .reviews__container {
@@ -1138,7 +1142,7 @@ circle:nth-child(2n) {
 .reviews__value {
   color: #2b2b2b;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
   line-height: 0%;
@@ -1228,16 +1232,23 @@ circle:nth-child(2n) {
   background-position: center;
 }
 
+.reviews__button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .reviews__button {
   color: var(--grey, #2b2b2b);
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 100%;
-  margin-left: 50%;
-  transform: translateX(-50%);
   padding: 1.38rem 1.38rem;
+}
+
+.reviews__upload {
+  display: none;
 }
 
 .reviews__page-container {
@@ -1452,11 +1463,11 @@ circle:nth-child(2n) {
 }
 
 .about {
-  margin-bottom: 6.25rem;
+  margin-bottom: 100px;
 }
 
 .about__title {
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px;
 }
 
 .about__container {
@@ -1489,7 +1500,7 @@ circle:nth-child(2n) {
 .about__header span {
   color: #2b2b2b;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.125rem;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 0%;
@@ -1497,8 +1508,8 @@ circle:nth-child(2n) {
 }
 
 .about__icon {
-  max-width: 1.5rem;
-  max-height: 1.5rem;
+  max-width: 24px;
+  max-height: 24px;
 }
 
 .about__text {
@@ -1610,17 +1621,17 @@ circle:nth-child(2n) {
 }
 
 .blog {
-  margin-bottom: 6.25rem;
+  margin-bottom: 100px;
 }
 
 .blog__title {
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px;
 }
 
 .blog__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
+  gap: 20px;
 }
 
 .blog__card {
@@ -1628,12 +1639,15 @@ circle:nth-child(2n) {
 }
 
 .blog__image--small {
-  border-radius: 0.625rem;
   overflow: hidden;
   margin-bottom: 1.12rem;
   height: 100%;
-  max-height: 12.5rem;
-  display: block;
+  border-radius: 10px;
+  max-height: 200px;
+  max-width: 275.2px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .blog__image--small picture,
@@ -1649,18 +1663,17 @@ circle:nth-child(2n) {
 .blog__title--small {
   color: #2b2b2b;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.25rem;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 130%;
-  margin-bottom: 1rem;
   display: block;
 }
 
 .blog__description {
   color: var(--grey-2, #8b8b8b);
   font-family: "Inter", sans-serif;
-  font-size: 0.875rem;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
@@ -1671,7 +1684,7 @@ circle:nth-child(2n) {
   display: flex;
   align-items: center;
   justify-content: start;
-  gap: 1.62rem;
+  gap: 25.92px;
   margin-bottom: 1.25rem;
 }
 
@@ -1682,7 +1695,7 @@ circle:nth-child(2n) {
   gap: 0.38rem;
   color: var(--grey-2, #8b8b8b);
   font-family: "Inter", sans-serif;
-  font-size: 0.75rem;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 0%;
@@ -1707,7 +1720,7 @@ circle:nth-child(2n) {
   gap: 0.38rem;
   color: var(--grey-2, #8b8b8b);
   font-family: "Inter", sans-serif;
-  font-size: 0.75rem;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 0%;
@@ -1732,7 +1745,7 @@ circle:nth-child(2n) {
   gap: 0.38rem;
   color: var(--grey-2, #8b8b8b);
   font-family: "Inter", sans-serif;
-  font-size: 0.75rem;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 0%;
@@ -1753,7 +1766,7 @@ circle:nth-child(2n) {
 .blog__read-more {
   color: #2b2b2b;
   font-family: "Inter", sans-serif;
-  font-size: 0.75rem;
+  font-size: 12px;
   font-style: normal;
   font-weight: 600;
   line-height: 100%;
@@ -3146,6 +3159,16 @@ html.lenis {
   }
 }
 
+@media (max-width: 1220px) {
+  .products__next {
+    right: -3rem;
+  }
+
+  .products__prev {
+    left: -3rem;
+  }
+}
+
 @media (max-width: 1170px) {
   .products__next {
     right: -2rem;
@@ -3177,8 +3200,20 @@ html.lenis {
     font-size: calc(14px + 4 * ((100vw - 360px) / 800));
   }
 
+  .products {
+    margin-top: calc(60px + 20 * ((100vw - 360px) / 800));
+  }
+
+  .products__nav {
+    margin-bottom: calc(30.08px + 9.92 * ((100vw - 360px) / 800));
+  }
+
   .products__button {
     font-size: calc(16px + 6 * ((100vw - 360px) / 800));
+  }
+
+  .products__wrapper {
+    margin-bottom: calc(60px + 40 * ((100vw - 360px) / 800));
   }
 
   .card__title {
@@ -3275,6 +3310,94 @@ html.lenis {
 
   .status__none::before {
     min-height: calc(8px + 2 * ((100vw - 360px) / 800));
+  }
+
+  .reviews {
+    margin-bottom: calc(60px + 40 * ((100vw - 360px) / 800));
+  }
+
+  .reviews__title {
+    margin-bottom: calc(30.08px + 9.92 * ((100vw - 360px) / 800));
+  }
+
+  .reviews__value {
+    font-size: calc(20px + 4 * ((100vw - 360px) / 800));
+  }
+
+  .reviews__button {
+    font-size: calc(14px + 2 * ((100vw - 360px) / 800));
+  }
+
+  .about {
+    margin-bottom: calc(60px + 40 * ((100vw - 360px) / 800));
+  }
+
+  .about__title {
+    margin-bottom: calc(30.08px + 9.92 * ((100vw - 360px) / 800));
+  }
+
+  .about__header span {
+    font-size: calc(14px + 4 * ((100vw - 360px) / 800));
+  }
+
+  .about__icon {
+    max-width: calc(22px + 2 * ((100vw - 360px) / 800));
+  }
+
+  .about__icon {
+    max-height: calc(22px + 2 * ((100vw - 360px) / 800));
+  }
+
+  .blog {
+    margin-bottom: calc(60px + 40 * ((100vw - 360px) / 800));
+  }
+
+  .blog__title {
+    margin-bottom: calc(30.08px + 9.92 * ((100vw - 360px) / 800));
+  }
+
+  .blog__container {
+    gap: calc(9.92px + 10.08 * ((100vw - 360px) / 800));
+  }
+
+  .blog__image--small {
+    border-radius: calc(6px + 4 * ((100vw - 360px) / 800));
+  }
+
+  .blog__image--small {
+    max-height: calc(130px + 70 * ((100vw - 360px) / 800));
+  }
+
+  .blog__image--small {
+    max-width: calc(155px + 120.2 * ((100vw - 360px) / 800));
+  }
+
+  .blog__title--small {
+    font-size: calc(12px + 6 * ((100vw - 360px) / 800));
+  }
+
+  .blog__description {
+    font-size: calc(8px + 6 * ((100vw - 360px) / 800));
+  }
+
+  .blog__info {
+    gap: calc(8px + 17.92 * ((100vw - 360px) / 800));
+  }
+
+  .blog__date {
+    font-size: calc(8px + 4 * ((100vw - 360px) / 800));
+  }
+
+  .blog__views {
+    font-size: calc(8px + 4 * ((100vw - 360px) / 800));
+  }
+
+  .blog__likes {
+    font-size: calc(8px + 4 * ((100vw - 360px) / 800));
+  }
+
+  .blog__read-more {
+    font-size: calc(8px + 4 * ((100vw - 360px) / 800));
   }
 
   .seo {
@@ -3374,9 +3497,31 @@ html.lenis {
   }
 }
 
+@media (max-width: 1150px) {
+  .header__search {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 1150px) and (max-width: 1160px) {
+  .header__search {
+    max-width: calc(80px + 240 * ((100vw - 360px) / 800));
+  }
+}
+
+@media (max-width: 1120px) {
+  .products__next {
+    right: -1.7rem;
+  }
+
+  .products__prev {
+    left: -1.7rem;
+  }
+}
+
 @media (max-width: 1100px) {
   .container {
-    max-width: 990px;
+    max-width: 920px;
   }
 }
 
@@ -3536,10 +3681,6 @@ html.lenis {
     transition: all 0.3s ease-in-out;
   }
 
-  .header__search {
-    max-width: 320px;
-  }
-
   .header__icons {
     display: flex;
     align-items: center;
@@ -3637,8 +3778,13 @@ html.lenis {
   }
 
   .products {
-    margin-top: 3.75rem;
     position: relative;
+  }
+
+  .products__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .products__button {
@@ -3661,14 +3807,87 @@ html.lenis {
     transform: translateY(-50%);
   }
 
+  .products__next {
+    display: none;
+  }
+
+  .products__prev {
+    display: none;
+  }
+
+  .products__paginations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.25rem;
+    position: absolute;
+    top: -3.7rem !important;
+    bottom: auto !important;
+    left: 6rem !important;
+    right: 15rem !important;
+    padding-left: 3.7rem;
+  }
+
+  .products__paginations .swiper-pagination-bullet {
+    min-width: 0.625rem;
+    min-height: 0.625rem;
+    border-radius: 0.1875rem;
+    border: 2px solid #ffcb31;
+    opacity: 1;
+    background: none;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .products__paginations .swiper-pagination-bullet-active {
+    min-width: 0.625rem;
+    min-height: 0.625rem;
+    border-radius: 0.1875rem;
+    background: #ffcb31;
+    border: 2px solid #ffcb31;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .reviews__upload {
+    display: block;
+  }
+
+  .reviews__button-wrapper {
+    justify-content: space-between;
+  }
+
+  .reviews__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .reviews__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .about__container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .blog__container {
     overflow-x: scroll;
     overflow-y: hidden;
-    padding-bottom: 1rem;
+  }
+
+  .blog__container::-webkit-scrollbar {
+    display: none;
   }
 
   .footer__nav,
@@ -3701,10 +3920,6 @@ html.lenis {
 @media (max-width: 992px) and (max-width: 1160px) {
   .header__button {
     font-size: calc(12px + 5.6 * ((100vw - 360px) / 800));
-  }
-
-  .header__search {
-    max-width: calc(80px + 240 * ((100vw - 360px) / 800));
   }
 }
 

@@ -313,6 +313,13 @@
 		}
 	}
 }
+@include media-width(1150px) {
+	.header {
+		&__search {
+			@include adaptiv-value("max-width", toPX(20), toPX(5), 1);
+		}
+	}
+}
 
 @include media-width($md) {
 	.catalog {
@@ -460,15 +467,6 @@
 					max-height: 30rem;
 					transition: $hover-transition;
 				}
-			}
-		}
-
-		&__search {
-			@include adaptiv-value("max-width", toPX(20), toPX(5), 1);
-
-			input {
-			}
-			a {
 			}
 		}
 
