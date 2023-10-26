@@ -170,6 +170,30 @@ button {
 @font-face {
   font-family: "Inter";
   font-display: swap;
+  src: url("../fonts/Inter-400.woff") format("woff"), url("../fonts/Inter-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
   src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
@@ -184,10 +208,10 @@ button {
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Inter-400.woff") format("woff"), url("../fonts/Inter-400.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -196,22 +220,6 @@ button {
   font-display: swap;
   src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
-  font-weight: 500;
   font-style: normal;
 }
 
@@ -248,18 +256,10 @@ button {
 }
 
 @font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -561,6 +561,7 @@ a {
   width: 100%;
   max-width: 26.25rem;
   box-sizing: border-box;
+  transition: all 1s ease-in-out;
 }
 
 .header__search-mobile {
@@ -580,9 +581,6 @@ a {
   height: 100%;
   padding: 1.31rem 0 1.38rem;
   box-sizing: border-box;
-  background-image: url("../img/Search.svg");
-  background-position: right center;
-  background-repeat: no-repeat;
 }
 
 .header__search input::-moz-placeholder {
@@ -599,8 +597,23 @@ a {
 }
 
 .header__search a svg {
-  width: 100%;
-  height: 100%;
+  width: 24px;
+  height: 24px;
+}
+
+.header__search a.glass {
+  right: 1.5rem;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/Search.svg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header__search a.search__close {
+  display: none;
+  right: 1.5rem;
 }
 
 .header__icons {
@@ -683,6 +696,40 @@ a {
 
 .menu-item-has-children:hover a::after {
   background-image: url("../img/Arrow_Down_Hover.svg");
+}
+
+@keyframes scale-easeOutElastic {
+  0% {
+    transform: scale(1);
+  }
+
+  16% {
+    transform: scale(-0.32);
+  }
+
+  28% {
+    transform: scale(0.13);
+  }
+
+  44% {
+    transform: scale(-0.05);
+  }
+
+  59% {
+    transform: scale(0.02);
+  }
+
+  73% {
+    transform: scale(-0.01);
+  }
+
+  88% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
 }
 
 .banner__container {
@@ -3196,6 +3243,22 @@ html.lenis {
     font-size: calc(12px + 4 * ((100vw - 360px) / 800));
   }
 
+  .header__search a svg {
+    width: calc(22px + 2 * ((100vw - 360px) / 800));
+  }
+
+  .header__search a svg {
+    height: calc(22px + 2 * ((100vw - 360px) / 800));
+  }
+
+  .header__search a.glass {
+    width: calc(22px + 2 * ((100vw - 360px) / 800));
+  }
+
+  .header__search a.glass {
+    height: calc(22px + 2 * ((100vw - 360px) / 800));
+  }
+
   .popular__button {
     font-size: calc(14px + 4 * ((100vw - 360px) / 800));
   }
@@ -3972,11 +4035,50 @@ html.lenis {
   }
 
   .header__search {
-    display: none;
+    left: 50%;
+    right: 50%;
+    transform: scaleX(0);
+    opacity: 0;
+    top: 1rem;
+    bottom: 1rem;
+    max-width: none;
+    height: auto;
+    width: auto;
+    position: absolute;
+    z-index: 5;
+    background: #fcfcfc;
+  }
+
+  .header__search a {
+    position: absolute;
+    top: 1rem;
+    right: 5.5rem;
+  }
+
+  .header__search a svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header__search a.glass {
+    right: 3.5rem;
+  }
+
+  .header__search a.search__close {
+    display: block;
+    right: 1.5rem;
   }
 
   .header__search-mobile {
     display: block;
+  }
+
+  .header__search.active {
+    transition: all 1s ease-in-out;
+    left: 0.5rem;
+    right: 0.5rem;
+    transform: scaleX(1);
+    opacity: 1;
   }
 
   .header__mobile-wrapper {
@@ -4112,6 +4214,14 @@ html.lenis {
 }
 
 @media (max-width: 767px) and (max-width: 1160px) {
+  .header__search a svg {
+    width: calc(22px + 2 * ((100vw - 360px) / 800));
+  }
+
+  .header__search a svg {
+    height: calc(22px + 2 * ((100vw - 360px) / 800));
+  }
+
   .banner__slide img {
     max-height: calc(400px + 240 * ((100vw - 360px) / 800));
   }

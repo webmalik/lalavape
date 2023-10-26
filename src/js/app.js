@@ -7,7 +7,7 @@ const products = document.querySelector('.products');
 const login = document.querySelector('.login');
 wmFunctions.tabs(products);
 wmFunctions.tabs(login);
-
+wmFunctions.headerFunctions();
 wmFunctions.rate();
 wmFunctions.accordion(false);
 wmFunctions.accordionMobile(false);

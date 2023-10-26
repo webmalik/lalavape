@@ -30,11 +30,26 @@ export function isWebp() {
 	});
 }
 
-export function burgerMenu() {
-	$('.header__burger').on("click", function (event) {
-		$('.header__burger, .header__menu').toggleClass('active');
-		$('body').toggleClass('lock');
-	});
+export function headerFunctions() {
+	const searchButton = document.querySelector('.header__search-mobile');
+	const searchClose = document.querySelector('.search__close');
+	const searchInput = document.querySelector('.header__search');
+	if (searchButton) {
+		if (innerWidth < 768) {
+			searchButton.addEventListener('click', (e) => {
+				e.preventDefault();
+				searchInput.classList.add('active');
+			});
+			searchClose.addEventListener('click', (e) => {
+				e.preventDefault();
+				searchInput.classList.remove('active');
+			});
+		}
+	}
+	// $('.header__burger').on("click", function (event) {
+	// 	$('.header__burger, .header__menu').toggleClass('active');
+	// 	$('body').toggleClass('lock');
+	// });
 }
 
 export function sticky() {
