@@ -5,20 +5,50 @@
 @include media-width($sm) {
 	.mmenu {
 		display: block;
-		max-width: 15rem;
+		max-width: 16rem;
+		width: 100%;
 		position: fixed;
 		max-height: 100dvh;
 		height: 100%;
 		top: 0;
-		left: 0;
+		left: -100dvw;
 		margin: auto;
 		box-sizing: border-box;
+		border-right: 0.63rem solid transparent;
+		border-radius: 0rem 0.625rem 0.625rem 0rem;
+		border: 2px solid $yellow_color;
+		background: $white_color;
+		padding-right: 0.63rem;
+		z-index: 3;
+		transition: all 0.6s ease-in-out;
+
+		&.active {
+			transition: all 0.6s ease-in-out;
+			left: 0;
+		}
+
+		&__bg {
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			margin: auto;
+			opacity: 0;
+			background: var(--grey, #2b2b2b);
+			z-index: 2;
+			transform: scale(0);
+			transition: all 0.6s ease-in-out;
+
+			&.active {
+				opacity: 0.3;
+				transform: scale(1);
+				transition: all 0.6s ease-in-out;
+			}
+		}
 
 		&__wrapper {
 			position: relative;
-			border-radius: 0rem 0.625rem 0.625rem 0rem;
-			border: 2px solid $yellow_color;
-			background: $white_color;
 			padding: 0.63rem 0.88rem 1.25rem;
 			overflow: auto;
 			height: 100%;
@@ -26,19 +56,19 @@
 			display: flex;
 			flex-direction: column;
 			gap: 1.25rem;
-
-			scroll-padding-top: 2rem;
-			scroll-behavior: smooth;
+			background: $white_color;
+			z-index: 4;
 
 			&::-webkit-scrollbar {
-				position: absolute;
-				right: 1rem;
+				position: relative;
 				width: 0.25rem;
 			}
 
 			&::-webkit-scrollbar-track {
 				border-radius: 1.25rem;
 				background: var(--grey-3, #ddd);
+				margin-top: 1.13rem;
+				margin-bottom: 1.13rem;
 			}
 
 			&::-webkit-scrollbar-thumb {
@@ -119,12 +149,26 @@
 					line-height: normal;
 
 					a {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
 						color: inherit;
 						font-family: inherit;
 						font-size: inherit;
 						font-style: inherit;
 						font-weight: inherit;
 						line-height: inherit;
+
+						&::after {
+							content: "";
+							display: block;
+							background-image: url("../img/arrow-right.svg");
+							background-repeat: no-repeat;
+							background-position: center;
+							background-size: cover;
+							min-width: 0.625rem;
+							min-height: 0.625rem;
+						}
 					}
 				}
 			}

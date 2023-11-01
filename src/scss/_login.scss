@@ -1,13 +1,14 @@
 .login {
 	&__buttons {
 		display: flex;
-		gap: 1.25rem;
+		@include adaptiv-value("gap", toPX(1.25), toPX(0.75), 1);
 		align-items: center;
 		justify-content: start;
 
 		& .button {
 			background-color: transparent;
 			box-sizing: border-box;
+			@include adaptiv-value("font-size", toPX(1), toPX(0.875), 1);
 			line-height: 0rem;
 
 			&.active {
@@ -17,7 +18,7 @@
 	}
 
 	&__content {
-		padding-top: 2.5rem;
+		@include adaptiv-value("padding-top", toPX(2.5), toPX(1.75), 1);
 		display: flex;
 		align-items: start;
 		justify-content: center;
@@ -178,6 +179,25 @@
 		a {
 			display: inline;
 			text-decoration: underline;
+		}
+	}
+}
+
+@include media-width($md) {
+	.login {
+		&__content {
+			flex-direction: column;
+		}
+		&__social {
+			padding-top: 1rem;
+		}
+		&__social--buttons {
+			flex-direction: row;
+		}
+		&__form {
+			border-right: none;
+			border-bottom: 0.01875rem solid #ddd;
+			padding-bottom: 1rem;
 		}
 	}
 }

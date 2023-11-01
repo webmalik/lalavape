@@ -60,7 +60,7 @@ a {
 	box-sizing: border-box;
 	color: $black_color;
 	font-family: $font-family-jost;
-	font-size: 1.375rem;
+	@include adaptiv-value("font-size", toPX(1.375), toPX(1), 1);
 	font-style: normal;
 	font-weight: 700;
 	line-height: 0%;

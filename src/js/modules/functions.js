@@ -46,10 +46,26 @@ export function headerFunctions() {
 			});
 		}
 	}
-	// $('.header__burger').on("click", function (event) {
-	// 	$('.header__burger, .header__menu').toggleClass('active');
-	// 	$('body').toggleClass('lock');
-	// });
+
+	const headerButton = document.querySelector('.header__mobile-button');
+	const menuBG = document.querySelector('.mmenu__bg');
+	const menuClose = document.querySelector('.mmenu__close');
+	const menu = document.querySelector('.mmenu');
+
+	headerButton.addEventListener('click', () => {
+		menu.classList.add('active');
+		menuBG.classList.add('active');
+	});
+	menuBG.addEventListener('click', () => {
+		menu.classList.remove('active');
+		menuBG.classList.remove('active');
+	});
+	menuClose.addEventListener('click', () => {
+		menu.classList.remove('active');
+		menuBG.classList.remove('active');
+	});
+
+
 }
 
 export function sticky() {

@@ -72,6 +72,9 @@
 	animation: modal_close 0.8s;
 }
 
+@include media-width($md) {
+}
+
 @keyframes modal {
 	0% {
 		transform: scale(0.2);
