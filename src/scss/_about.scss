@@ -48,14 +48,14 @@
 	&__text {
 		color: $black_color;
 		font-family: $font-family-inter;
-		font-size: 1rem;
+		@include adaptiv-value("font-size", toPX(1), toPX(0.875), 1);
 		font-style: normal;
 		font-weight: 400;
 		line-height: 130%;
 		border-radius: 0.625rem;
 		border: 1px solid var(--grey-3, #ddd);
 		padding: 1.87rem 2.81rem 1.87rem 1.87rem;
-		margin-top: 1.88rem;
+		@include adaptiv-value("margin-top", toPX(1.88), toPX(1.44), 1);
 	}
 
 	&__content {
@@ -82,25 +82,34 @@
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: 1.25rem;
+		@include adaptiv-value("gap", toPX(1.25), toPX(0.56), 1);
 	}
 
 	&__item {
 		border-radius: 0.625rem;
 		background: var(--grey-4, #f3f3f3);
-		padding: 1.5rem;
+		@include adaptiv-value("padding", toPX(1.5), toPX(0.87), 1);
 		color: $black_color;
 		font-family: $font-family-montserrat;
-		font-size: 1.125rem;
+		@include adaptiv-value("font-size", toPX(1.125), toPX(0.875), 1);
 		font-style: normal;
 		font-weight: 700;
-		line-height: 0%;
+		line-height: 100%;
 
 		display: flex;
 		align-items: center;
 		justify-content: start;
 		gap: 0.75rem;
 		box-sizing: border-box;
+
+		picture,
+		img,
+		svg {
+			@include adaptiv-value("max-width", toPX(2), toPX(1.375), 1);
+			@include adaptiv-value("max-height", toPX(2), toPX(1.375), 1);
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	&__page {
@@ -114,8 +123,8 @@
 	}
 
 	&__popular {
-		margin-top: 1.88rem;
-		margin-bottom: 6.25rem;
+		@include adaptiv-value("margin-top", toPX(1.88), toPX(1.19), 1);
+		@include adaptiv-value("margin-bottom", toPX(6.25), toPX(3.75), 1);
 
 		.popular__brand {
 			grid-template-columns: repeat(8, 1fr);
@@ -123,7 +132,7 @@
 	}
 
 	&__sending {
-		margin-bottom: 6.25rem;
+		@include adaptiv-value("margin-bottom", toPX(6.25), toPX(3.75), 1);
 	}
 
 	&__contacts {
@@ -132,7 +141,8 @@
 
 	&__item--border {
 		border: 2px solid $yellow_color;
-		padding: calc(1.5rem - 2px);
+		@include adaptiv-value("padding", toPX(1.5), toPX(0.87), 1);
+		box-sizing: border-box;
 	}
 
 	&__socials {
@@ -141,7 +151,7 @@
 		align-items: center;
 		justify-content: start;
 		gap: 0.81rem;
-		margin-bottom: 6.25rem;
+		@include adaptiv-value("margin-bottom", toPX(6.25), toPX(4.37), 1);
 
 		.about__title {
 			margin-bottom: 0;
@@ -159,6 +169,14 @@
 	}
 }
 
+@include media-width(1100px) {
+	.about {
+		&__items {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
 @include media-width($md) {
 	.about {
 		&__title {
@@ -169,12 +187,23 @@
 		&__container {
 			grid-template-columns: repeat(2, 1fr);
 		}
+
+		&__text {
+			@include adaptiv-value("padding", toPX(1.75), toPX(1.25), 1);
+		}
+
+		&__items {
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 }
 
 @include media-width($sm) {
 	.about {
 		&__container {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		&__items {
 			grid-template-columns: repeat(1, 1fr);
 		}
 	}

@@ -190,9 +190,23 @@
 		}
 		&__social {
 			padding-top: 1rem;
+			width: 100%;
+		}
+		&__social--wrapper {
+			width: 100%;
+			max-width: none;
+			box-sizing: border-box;
 		}
 		&__social--buttons {
-			flex-direction: row;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1.25rem;
+			width: 100%;
+
+			a {
+				width: 100%;
+				box-sizing: border-box;
+			}
 		}
 		&__form {
 			border-right: none;

@@ -168,11 +168,11 @@
 	&__buttons {
 		display: flex;
 		align-items: center;
-		gap: 1.25rem;
+		@include adaptiv-value("gap", toPX(1.25), toPX(1), 1);
 	}
 
 	&__button {
-		font-size: 1rem;
+		@include adaptiv-value("font-size", toPX(1), toPX(0.75), 1);
 		font-style: normal;
 		font-weight: 700;
 		line-height: 0%;
@@ -242,7 +242,7 @@
 					box-sizing: border-box;
 					color: $black_color;
 					font-family: $font-family-inter;
-					font-size: 0.75rem;
+					@include adaptiv-value("font-size", toPX(0.75), toPX(0.625), 1);
 					font-style: normal;
 					font-weight: 400;
 					line-height: 0%; /* 0rem */
@@ -375,6 +375,39 @@
 			&::-webkit-scrollbar {
 				display: none;
 			}
+		}
+
+		&__page {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		&__control {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 2.5rem;
+		}
+
+		&__buttons {
+			max-width: 100%;
+			overflow-x: scroll;
+			overflow-y: hidden;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+
+		&__sort {
+			.blog__title {
+				display: none;
+			}
+		}
+	}
+}
+
+@include media-width($sm) {
+	.blog {
+		&__page {
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 }

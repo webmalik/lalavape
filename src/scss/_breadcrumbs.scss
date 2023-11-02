@@ -3,6 +3,7 @@
 	align-items: center;
 	gap: 0.38rem;
 	padding: 1.42rem 0 3.75rem;
+	@include adaptiv-value("padding-bottom", toPX(3.75), toPX(2.5), 1);
 
 	&__select {
 		pointer-events: none;
@@ -11,7 +12,7 @@
 	&__item {
 		color: var(--grey-2, #8b8b8b);
 		font-family: $font-family-inter;
-		font-size: 0.875rem;
+		@include adaptiv-value("font-size", toPX(0.875), toPX(0.625), 1);
 		font-style: normal;
 		font-weight: 300;
 		display: flex;

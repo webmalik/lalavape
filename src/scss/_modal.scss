@@ -72,7 +72,12 @@
 	animation: modal_close 0.8s;
 }
 
-@include media-width($md) {
+@include media-width(500px) {
+	.modal {
+		&__wrapper {
+			max-width: 17.75rem;
+		}
+	}
 }
 
 @keyframes modal {

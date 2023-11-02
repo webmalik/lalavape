@@ -1,18 +1,30 @@
 .page-not-found {
 	&__wrapper {
-		padding-bottom: 5rem;
-		padding-top: 6.3rem;
+		@include adaptiv-value("padding-top", toPX(6.3), toPX(3.74), 1);
+		@include adaptiv-value("padding-bottom", toPX(5), toPX(2.5), 1);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 
 	&__head {
 		display: flex;
-		align-items: start;
+		align-items: center;
 		justify-content: center;
-		gap: 1.5rem;
+		@include adaptiv-value("gap", toPX(1.5), toPX(1), 1);
+
+		picture,
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			@include adaptiv-value("max-width", toPX(18.75), toPX(8.125), 1);
+		}
 		span {
 			color: $black_color;
 			font-family: $font-family-inter;
-			font-size: 18.75rem;
+			@include adaptiv-value("font-size", toPX(18.75), toPX(7.5), 1);
 			font-style: normal;
 			font-weight: 600;
 			line-height: 115%;
@@ -23,18 +35,21 @@
 	&__description {
 		color: $black_color;
 		font-family: $font-family-inter;
-		font-size: 1rem;
+		@include adaptiv-value("font-size", toPX(1), toPX(0.875), 1);
 		font-style: normal;
 		font-weight: 400;
 		text-align: center;
-		margin-top: -5rem;
+		@include adaptiv-value("margin-top", toPX(5), toPX(3.75), 1);
 	}
 
 	&__button {
-		margin-top: 3.75rem;
-		display: inline-block;
+		display: inline-flex;
 		line-height: 100%;
-		margin-left: 50%;
-		transform: translateX(-50%);
+		margin: 3.75rem auto 0;
+		@include adaptiv-value("margin-top", toPX(3.75), toPX(2.5), 1);
+		// margin-left: 50%;
+		// transform: translateX(-50%);
+		// width: 100%;
+		@include adaptiv-value("font-size", toPX(1), toPX(0.875), 1);
 	}
 }
