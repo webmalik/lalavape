@@ -209,13 +209,47 @@ function productsSlider() {
 export function blogSlider() {
 	const blogSwiper = new Swiper('.blog__slider', {
 		loop: true,
-		modules: [Navigation],
-		spaceBetween: 20,
-		slidesPerView: 5,
+		modules: [Pagination, Navigation],
+		spaceBetween: 9,
+		slidesPerView: 2,
 		navigation: {
-			nextEl: '.blog__next',
-			prevEl: '.blog__prev',
+			nextEl: '.products__next',
+			prevEl: '.products__prev',
 		},
+		pagination: {
+			el: '.products__paginations',
+			clickable: true,
+			dynamicBullets: true,
+			dynamicMainBullets: 4,
+		},
+
+		breakpoints: {
+			1200: {
+				slidesPerView: 5,
+				spaceBetween: 20,
+			},
+			1000: {
+				slidesPerView: 4,
+				spaceBetween: 15,
+			},
+
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 15,
+				pagination: {
+					enabled: false,
+				}
+			},
+
+			767: {
+				slidesPerView: 4,
+				spaceBetween: 12,
+			},
+			520: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			}
+		}
 	});
 }
 

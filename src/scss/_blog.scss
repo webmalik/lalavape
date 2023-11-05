@@ -285,13 +285,18 @@
 
 	&__products {
 		margin-bottom: 4.75rem;
+		@include adaptiv-value("padding-top", toPX(0), toPX(2.5), 1);
+
+		.products__paginations {
+			top: -1.5rem !important;
+		}
 	}
 
 	&__content {
 		p {
 			color: $black_color;
 			font-family: $font-family-inter;
-			font-size: 1rem;
+			@include adaptiv-value("font-size", toPX(1), toPX(0.875), 1);
 			font-style: normal;
 			font-weight: 400;
 			line-height: 130%; /* 1.3rem */
@@ -300,12 +305,12 @@
 		h3 {
 			color: $black_color;
 			font-family: $font-family-montserrat;
-			font-size: 1.125rem;
+			@include adaptiv-value("font-size", toPX(1.125), toPX(0.875), 1);
 			font-style: normal;
 			font-weight: 700;
 			line-height: 100%;
-			padding-bottom: 1.5rem;
-			padding-top: 2.5rem;
+			@include adaptiv-value("padding-bottom", toPX(1.5), toPX(1.25), 1);
+			@include adaptiv-value("padding-top", toPX(2.5), toPX(2.12), 1);
 		}
 
 		ul {
@@ -338,10 +343,14 @@
 		gap: 1.25rem;
 		color: $black_color;
 		font-family: $font-family-montserrat;
-		font-size: 1.125rem;
+		@include adaptiv-value("font-size", toPX(1.125), toPX(0.875), 1);
 		font-style: normal;
 		font-weight: 700;
 		line-height: 0%; /* 0rem */
+
+		svg {
+			@include adaptiv-value("max-width", toPX(2), toPX(1.5), 1);
+		}
 	}
 
 	&__shared {
@@ -350,7 +359,7 @@
 		gap: 1.25rem;
 		color: $black_color;
 		font-family: $font-family-montserrat;
-		font-size: 1.125rem;
+		@include adaptiv-value("font-size", toPX(1.125), toPX(0.875), 1);
 		font-style: normal;
 		font-weight: 700;
 		line-height: 0%; /* 0rem */
@@ -360,6 +369,10 @@
 		display: flex;
 		align-items: center;
 		gap: 0.75rem;
+
+		svg {
+			@include adaptiv-value("max-width", toPX(2), toPX(1.5), 1);
+		}
 	}
 }
 
@@ -376,6 +389,15 @@
 			&::-webkit-scrollbar {
 				display: none;
 			}
+		}
+
+		&__footer {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&__image {
+			margin-bottom: 1.88rem;
 		}
 
 		&__page {
