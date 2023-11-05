@@ -3,12 +3,14 @@ import Swiper from "swiper";
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import LocomotiveScroll from "locomotive-scroll";
 import { Fancybox } from "@fancyapps/ui";
+import noUiSlider from 'nouislider';
 
 
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'nouislider/dist/nouislider.css';
 
 export function isWebp() {
 	function testWebP(callback) {
@@ -66,6 +68,30 @@ export function headerFunctions() {
 	});
 
 
+}
+
+export function filterMobile() {
+	const filterClose = document.querySelector('.filter__close');
+	const filter = document.querySelector('.filter');
+	const filterBG = document.querySelector('.filter__bg');
+	const filterBTN = document.querySelector('.catalog__filter-btn');
+
+
+	if (filter) {
+		filterBTN.addEventListener('click', (e) => {
+			e.preventDefault();
+			filter.classList.add('active');
+			filterBG.classList.add('active');
+		});
+		filterClose.addEventListener('click', () => {
+			filter.classList.remove('active');
+			filterBG.classList.remove('active');
+		});
+		filterBG.addEventListener('click', () => {
+			filter.classList.remove('active');
+			filterBG.classList.remove('active');
+		});
+	}
 }
 
 export function sticky() {
@@ -515,5 +541,45 @@ export function dropFile() {
 				alert('Файл не є зображенням: ' + file.name);
 			}
 		}
+	}
+}
+
+export function priceSlider() {
+	const rangeSlider = document.querySelector('.filter__price-slider');
+
+	if (rangeSlider) {
+		noUiSlider.create(rangeSlider, {
+			start: [0, 9999],
+			connect: true,
+			step: 1,
+			range: {
+				'min': [0],
+				'max': [9999]
+			}
+		});
+
+		const input0 = document.getElementById('price0');
+		const input1 = document.getElementById('price1');
+		const inputs = [input0, input1];
+
+		rangeSlider.noUiSlider.on('update', function (values, handle) {
+			inputs[handle].value = Math.round(values[handle]);
+		});
+
+		const setRangeSlider = (i, value) => {
+			let arr = [null, null];
+			arr[i] = value;
+
+			console.log(arr);
+
+			rangeSlider.noUiSlider.set(arr);
+		};
+
+		inputs.forEach((el, index) => {
+			el.addEventListener('change', (e) => {
+				console.log(index);
+				setRangeSlider(index, e.currentTarget.value);
+			});
+		});
 	}
 }

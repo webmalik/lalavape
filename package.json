@@ -45,6 +45,7 @@
 		"gulp-zip": "latest",
 		"jquery": "latest",
 		"locomotive-scroll": "^5.0.0-beta.8",
+		"nouislider": "^15.7.1",
 		"sass": "^1.63.6",
 		"siema": "latest",
 		"style-loader": "^3.3.3",
