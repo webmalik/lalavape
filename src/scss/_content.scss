@@ -2,7 +2,7 @@
 	&__title {
 		color: $black_color;
 		font-family: $font-family-montserrat;
-		font-size: 1.375rem;
+		@include adaptiv-value("font-size", toPX(1.375), toPX(1.25), 1);
 		font-style: normal;
 		font-weight: 700;
 	}
@@ -10,16 +10,16 @@
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
-		gap: 3.13rem;
-		padding-top: 2.62rem;
-		padding-bottom: 5rem;
+		@include adaptiv-value("gap", toPX(3.13), toPX(1.88), 1);
+		@include adaptiv-value("padding-top", toPX(2.62), toPX(1.87), 1);
+		@include adaptiv-value("padding-bottom", toPX(5), toPX(3.75), 1);
 	}
 
 	&__item {
 		h3 {
 			color: $black_color;
 			font-family: $font-family-montserrat;
-			font-size: 1.125rem;
+			@include adaptiv-value("font-size", toPX(1.125), toPX(0.875), 1);
 			font-style: normal;
 			font-weight: 700;
 			padding-bottom: 0.69rem;
@@ -28,7 +28,7 @@
 		h4 {
 			color: $black_color;
 			font-family: $font-family-inter;
-			font-size: 1rem;
+			@include adaptiv-value("font-size", toPX(1), toPX(0.875), 1);
 			font-style: normal;
 			font-weight: 600;
 			line-height: 130%;
@@ -41,7 +41,7 @@
 		p {
 			color: $black_color;
 			font-family: $font-family-inter;
-			font-size: 1rem;
+			@include adaptiv-value("font-size", toPX(1), toPX(0.875), 1);
 			font-style: normal;
 			font-weight: 400;
 			line-height: 130%;
@@ -49,7 +49,7 @@
 			a {
 				color: $black_color;
 				font-family: $font-family-inter;
-				font-size: 1rem;
+				@include adaptiv-value("font-size", toPX(1), toPX(0.875), 1);
 				font-style: normal;
 				font-weight: 400;
 				line-height: 130%;

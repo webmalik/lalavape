@@ -1,15 +1,23 @@
 .grey {
 	color: var(--grey-2, #8b8b8b);
 	font-family: $font-family-montserrat;
-	font-size: 1.125rem;
+	@include adaptiv-value("font-size", toPX(1.125), toPX(0.875), 1);
 	font-style: normal;
 	font-weight: 700;
 	line-height: 0%;
 }
 .contacts__page {
-	padding-bottom: 6.25rem;
+	@include adaptiv-value("padding-bottom", toPX(6.25), toPX(3.69), 1);
 
 	.about__items {
 		gap: 1.81rem 1.25rem;
+	}
+}
+
+@include media-width($md) {
+	.contacts__page {
+		.about__items {
+			gap: 0.56rem;
+		}
 	}
 }
