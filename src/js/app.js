@@ -5,6 +5,8 @@ wmFunctions.banner();
 
 const products = document.querySelector('.products');
 const login = document.querySelector('.login');
+const cabinet = document.querySelector('.cabinet');
+wmFunctions.tabs(cabinet);
 wmFunctions.tabs(products);
 wmFunctions.tabs(login);
 wmFunctions.headerFunctions();
