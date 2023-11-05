@@ -3,21 +3,14 @@ import * as wmFunctions from "./modules/functions.js"
 wmFunctions.isWebp();
 wmFunctions.banner();
 
-const products = document.querySelector('.products');
 const login = document.querySelector('.login');
-const cabinet = document.querySelector('.cabinet');
 const product = document.querySelector('.product');
 
-wmFunctions.tabs(cabinet);
+wmFunctions.productSliders();
+
 wmFunctions.tabs(login);
 wmFunctions.tabs(product);
 
-
-if (!product) {
-	wmFunctions.tabs(products);
-} else {
-	wmFunctions.productSliders();
-}
 
 wmFunctions.headerFunctions();
 wmFunctions.filterMobile();

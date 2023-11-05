@@ -184,6 +184,7 @@ function productsSlider() {
 
 	let activeTab = document.querySelector('.products__slider.active');
 
+
 	if (activeTab) {
 		productsSwiper = new Swiper(activeTab, {
 			loop: true,
@@ -196,6 +197,105 @@ function productsSlider() {
 			},
 			pagination: {
 				el: '.products__paginations',
+				clickable: true,
+				dynamicBullets: true,
+				dynamicMainBullets: 4,
+			},
+
+			breakpoints: {
+				1200: {
+					slidesPerView: 5,
+					spaceBetween: 20,
+				},
+				1000: {
+					slidesPerView: 4,
+					spaceBetween: 15,
+				},
+
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 15,
+					pagination: {
+						enabled: false,
+					}
+				},
+
+				767: {
+					slidesPerView: 4,
+					spaceBetween: 12,
+				},
+				520: {
+					slidesPerView: 3,
+					spaceBetween: 10,
+				}
+			}
+		});
+
+	}
+}
+
+export function productSliders() {
+	let slider1 = document.querySelector('.products__slider-1');
+	let slider2 = document.querySelector('.products__slider-2');
+
+	if (slider1) {
+		let productsSwiper = new Swiper(slider1, {
+			loop: true,
+			modules: [Pagination, Navigation],
+			spaceBetween: 9,
+			slidesPerView: 2,
+			navigation: {
+				nextEl: '.products__next-1',
+				prevEl: '.products__prev-1',
+			},
+			pagination: {
+				el: '.products__paginations-1',
+				clickable: true,
+				dynamicBullets: true,
+				dynamicMainBullets: 4,
+			},
+
+			breakpoints: {
+				1200: {
+					slidesPerView: 5,
+					spaceBetween: 20,
+				},
+				1000: {
+					slidesPerView: 4,
+					spaceBetween: 15,
+				},
+
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 15,
+					pagination: {
+						enabled: false,
+					}
+				},
+
+				767: {
+					slidesPerView: 4,
+					spaceBetween: 12,
+				},
+				520: {
+					slidesPerView: 3,
+					spaceBetween: 10,
+				}
+			}
+		});
+	}
+	if (slider2) {
+		let productsSwiper2 = new Swiper(slider2, {
+			loop: true,
+			modules: [Pagination, Navigation],
+			spaceBetween: 9,
+			slidesPerView: 2,
+			navigation: {
+				nextEl: '.products__next-2',
+				prevEl: '.products__prev-2',
+			},
+			pagination: {
+				el: '.products__paginations-2',
 				clickable: true,
 				dynamicBullets: true,
 				dynamicMainBullets: 4,

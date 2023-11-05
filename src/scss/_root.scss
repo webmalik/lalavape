@@ -44,6 +44,10 @@ a {
 	&--left {
 		text-align: left;
 	}
+
+	&.mb {
+		@include adaptiv-value("margin-bottom", toPX(2.62), toPX(3.62), 1);
+	}
 }
 
 @include media-width($md) {
