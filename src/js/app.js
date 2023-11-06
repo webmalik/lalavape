@@ -12,12 +12,9 @@ wmFunctions.tabs(cabinet);
 wmFunctions.tabs(login);
 wmFunctions.tabs(product);
 
-
-if (!product) {
-	wmFunctions.tabs(products);
-} else {
-	wmFunctions.productSliders();
-}
+wmFunctions.productSliders();
+wmFunctions.productImages();
+wmFunctions.tabs(products);
 
 wmFunctions.headerFunctions();
 wmFunctions.filterMobile();

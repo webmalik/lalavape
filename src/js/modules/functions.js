@@ -683,3 +683,32 @@ export function priceSlider() {
 		});
 	}
 }
+
+export function productImages() {
+	const slider = document.querySelector('.product__images');
+	const slides = document.querySelectorAll('.product__image');
+
+	if (slider && window.innerWidth < 992) {
+		slider.classList.add('swiper');
+		slides.forEach((slide) => {
+			slide.classList.add('swiper-slide');
+		})
+
+		const imag = new Swiper(slider, {
+			loop: true,
+			speed: 800,
+			modules: [Pagination, Autoplay],
+			slidesPerView: 1,
+			spaceBetween: 20,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+				pauseOnMouseEnter: true,
+			},
+			pagination: {
+				el: '.banner__pagination',
+				clickable: true,
+			},
+		});
+	}
+}

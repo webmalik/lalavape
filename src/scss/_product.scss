@@ -255,6 +255,17 @@
 			flex-direction: column;
 		}
 
+		&__images {
+			.swiper-wrapper {
+				display: flex;
+				gap: 0;
+			}
+
+			.swiper-slide {
+				box-sizing: border-box;
+			}
+		}
+
 		&__card {
 			flex-direction: column;
 		}
