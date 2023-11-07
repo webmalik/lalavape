@@ -44,3 +44,8 @@ $breakpoints: (
 	large: 1024px,
 	xlarge: 1366px
 );
+$rem: 16px;
+
+@include media-width($sm) {
+	$rem: 18px;
+}

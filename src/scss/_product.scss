@@ -17,6 +17,37 @@
 			border-bottom: 1px solid #ddd;
 		}
 
+		.card__price {
+			@include adaptiv-value("font-size", toPX(1.75), toPX(1.375), 1);
+
+			span {
+				@include adaptiv-value("font-size", toPX(1.5), toPX(1.125), 1);
+			}
+		}
+
+		.status {
+			&__ok {
+				&::before {
+					@include adaptiv-value("min-width", toPX(0.875), toPX(0.875), 1);
+					@include adaptiv-value("min-height", toPX(0.875), toPX(0.875), 1);
+				}
+			}
+
+			&__wait {
+				&::before {
+					@include adaptiv-value("min-width", toPX(0.875), toPX(0.875), 1);
+					@include adaptiv-value("min-height", toPX(0.875), toPX(0.875), 1);
+				}
+			}
+
+			&__none {
+				&::before {
+					@include adaptiv-value("min-width", toPX(0.875), toPX(0.875), 1);
+					@include adaptiv-value("min-height", toPX(0.875), toPX(0.875), 1);
+				}
+			}
+		}
+
 		.card__like {
 			border-color: transparent;
 		}

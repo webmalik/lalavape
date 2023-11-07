@@ -85,10 +85,18 @@
 		}
 	}
 
-	&__submit {
+	.login__form .form input.login__submit {
 		line-height: 0rem;
 		border-color: $yellow_color !important;
 		margin-top: 0.2rem;
+		color: var(--grey, #2b2b2b);
+		font-family: $font-family-montserrat;
+		@include adaptiv-value("font-size", toPX(1), toPX(0.875), 1);
+		font-style: normal;
+		font-weight: 700;
+		line-height: 100%; /* 0rem */
+		@include adaptiv-value("padding-top", toPX(1.22), toPX(1.02), 1);
+		@include adaptiv-value("padding-bottom", toPX(1.22), toPX(1.02), 1);
 	}
 
 	&__title {
@@ -130,7 +138,7 @@
 	&__social--wrapper {
 		padding: 0 1rem 0 1.25rem;
 		width: 100%;
-		max-width: 8.4375rem;
+		max-width: 10rem;
 	}
 
 	&__social {
@@ -153,7 +161,7 @@
 		align-items: center;
 		justify-content: center;
 		gap: 0.62rem;
-		padding: 0.5rem 0;
+		padding: 0.25rem 0;
 		width: 100%;
 		min-height: 2.5rem;
 
@@ -163,7 +171,7 @@
 			font-size: 0.75rem;
 			font-style: normal;
 			font-weight: 300;
-			line-height: 0%; /* 0rem */
+			line-height: 100%; /* 0rem */
 		}
 	}
 

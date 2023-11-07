@@ -16,7 +16,7 @@
 		@include adaptiv-value("font-size", toPX(1.375), toPX(1), 1);
 		font-style: normal;
 		font-weight: 700;
-		line-height: 1;
+		line-height: 50%;
 
 		&:hover,
 		&.active {
@@ -26,7 +26,7 @@
 
 	&__all {
 		position: absolute;
-		top: 1.25rem;
+		top: 1.65rem;
 		right: 0;
 		color: var(--grey-2, #8b8b8b);
 		font-family: $font-family-inter;
@@ -117,13 +117,16 @@
 			align-items: center;
 			justify-content: space-between;
 		}
+
 		&__button {
 			padding: 0.75rem 0.9rem;
+			line-height: 100%;
 		}
 		&__nav {
 			gap: 0.5rem;
 			padding-bottom: 4.44rem;
 			margin-bottom: 0;
+			justify-content: flex-start;
 		}
 
 		&__title {

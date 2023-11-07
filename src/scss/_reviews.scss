@@ -120,7 +120,7 @@ circle:nth-child(2n) {
 		font-size: 0.75rem;
 		font-style: normal;
 		font-weight: 400;
-		line-height: 0%; /* 0rem */
+		line-height: 100%; /* 0rem */
 	}
 
 	&__date {
@@ -222,6 +222,7 @@ circle:nth-child(2n) {
 	&__control {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		gap: 1.5rem;
 		padding-top: 2.5rem;
 	}
@@ -271,7 +272,7 @@ circle:nth-child(2n) {
 				font-size: 1rem;
 				font-style: normal;
 				font-weight: 600;
-				line-height: 0%; /* 0rem */
+				line-height: 100%; /* 0rem */
 			}
 		}
 

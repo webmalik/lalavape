@@ -682,6 +682,11 @@
 
 			&-mobile {
 				display: block;
+
+				svg {
+					width: 26px;
+					height: 26px;
+				}
 			}
 
 			&.active {
@@ -702,8 +707,8 @@
 		&__basket,
 		&__favorite {
 			svg {
-				width: 22px;
-				height: 22px;
+				width: 26px;
+				height: 26px;
 			}
 		}
 
