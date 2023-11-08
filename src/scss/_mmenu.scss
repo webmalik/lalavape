@@ -5,7 +5,7 @@
 @include media-width($sm) {
 	.mmenu {
 		display: block;
-		max-width: 16rem;
+		max-width: 17rem;
 		width: 100%;
 		position: fixed;
 		max-height: 100dvh;
@@ -38,12 +38,12 @@
 			background: var(--grey, #2b2b2b);
 			z-index: 4;
 			transform: scale(0);
-			transition: all 0.6s ease-in-out;
+			transition: opacity 0.6s ease-in-out;
 
 			&.active {
 				opacity: 0.3;
 				transform: scale(1);
-				transition: all 0.6s ease-in-out;
+				transition: opacity 0.6s ease-in-out;
 			}
 		}
 
@@ -104,7 +104,7 @@
 				gap: 0.5rem;
 				color: var(--grey, #2b2b2b);
 				font-family: $font-family-inter;
-				font-size: 0.625rem;
+				font-size: 0.75rem;
 				font-style: normal;
 				font-weight: 400;
 				line-height: normal;
@@ -143,7 +143,7 @@
 				li {
 					color: $black_color;
 					font-family: $font-family-inter;
-					font-size: 0.75rem;
+					font-size: 0.875rem;
 					font-style: normal;
 					font-weight: 400;
 					line-height: normal;
@@ -182,7 +182,7 @@
 				li {
 					color: $black_color;
 					font-family: $font-family-inter;
-					font-size: 0.625rem;
+					font-size: 0.875rem;
 					font-style: normal;
 					font-weight: 400;
 					line-height: normal;
@@ -212,7 +212,7 @@
 		&__cintacts-item {
 			color: $black_color;
 			font-family: $font-family-montserrat;
-			font-size: 0.625rem;
+			font-size: 0.75rem;
 			font-style: normal;
 			font-weight: 700;
 			line-height: 0%; /* 0rem */
@@ -225,7 +225,7 @@
 		&__footer {
 			color: var(--grey-2, #8b8b8b);
 			font-family: $font-family-inter;
-			font-size: 0.625rem;
+			font-size: 0.75rem;
 			font-style: normal;
 			font-weight: 400;
 			line-height: normal;

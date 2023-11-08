@@ -15,7 +15,7 @@
 		font-family: $font-family-jost;
 		@include adaptiv-value("font-size", toPX(1.25), toPX(0.875), 1);
 		font-style: normal;
-		font-weight: 600;
+		font-weight: 700;
 		line-height: 130%; /* 0rem */
 	}
 

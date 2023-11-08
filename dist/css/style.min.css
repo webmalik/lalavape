@@ -165,13 +165,6 @@ button {
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
   src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
@@ -186,22 +179,36 @@ button {
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
+  src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
@@ -230,13 +237,6 @@ button {
   font-display: swap;
   src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
   font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
-  font-weight: 500;
   font-style: normal;
 }
 @font-face {
@@ -851,6 +851,9 @@ a {
     display: flex;
     align-items: center;
   }
+  .header__navigations {
+    margin-top: 0.5rem;
+  }
   .header__list {
     gap: 1rem;
   }
@@ -872,8 +875,23 @@ a {
     max-width: 5.625rem;
     width: 5.625rem;
     min-height: 5.64113rem;
+    max-width: 90px;
+    min-height: 90.25808px;
+    margin-left: 1.25rem;
     display: block;
   }
+}
+@media (max-width: 992px) and (max-width: 1160px) {
+  .header__logo {
+    max-width: calc(48px + 42 * ((100vw - 360px) / 800));
+  }
+}
+@media (max-width: 992px) and (max-width: 1160px) {
+  .header__logo {
+    min-height: calc(48.32px + 41.93808 * ((100vw - 360px) / 800));
+  }
+}
+@media (max-width: 992px) {
   .header__logo picture,
   .header__logo img {
     width: 100%;
@@ -1004,6 +1022,10 @@ a {
   .header__mobile-button {
     display: block;
   }
+  .header__mobile-button svg {
+    width: 30px;
+    height: 30px;
+  }
   .header__button {
     display: none;
   }
@@ -1076,8 +1098,11 @@ a {
     min-height: 0.6875rem;
     font-size: 0.4125rem;
   }
+  .contacts {
+    gap: 0.25rem;
+  }
   .contacts__item p {
-    font-size: 0.5rem;
+    font-size: 0.625rem;
   }
   .contacts__item img,
   .contacts__item svg {
@@ -1090,8 +1115,27 @@ a {
   .contacts__telegram img,
   .contacts__telegram svg, .contacts__viber img,
   .contacts__viber svg {
-    width: 0.75rem;
-    height: 0.75rem;
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (max-width: 767px) and (max-width: 1160px) {
+  .contacts__telegram img,
+  .contacts__telegram svg, .contacts__viber img,
+  .contacts__viber svg {
+    width: calc(13.6px + 10.4 * ((100vw - 360px) / 800));
+  }
+}
+@media (max-width: 767px) and (max-width: 1160px) {
+  .contacts__telegram img,
+  .contacts__telegram svg, .contacts__viber img,
+  .contacts__viber svg {
+    height: calc(13.6px + 10.4 * ((100vw - 360px) / 800));
+  }
+}
+@media (max-width: 368px) {
+  .contacts__item p {
+    font-size: 0.5rem;
   }
 }
 @keyframes scale-easeOutElastic {
@@ -1574,12 +1618,18 @@ a {
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 130%; /* 1.625rem */
+  line-height: 130%;
+  border-radius: 0.5rem;
 }
 @media (max-width: 1160px) {
   .product__card .card__shop {
     font-size: calc(16px + 4 * ((100vw - 360px) / 800));
   }
+}
+.product__card .card__shop:hover {
+  border-radius: 0.5rem;
+  border: 1px solid var(--grey-2, #8b8b8b);
+  color: var(--yellow, #ffcb31);
 }
 .product__content {
   display: flex;
@@ -2307,6 +2357,7 @@ circle:nth-child(2n) {
   display: flex;
   flex-direction: column;
   gap: 1.06rem;
+  background: var(--yellow-2, #fffdf2);
 }
 .reviews__line-item {
   display: flex;
@@ -2345,7 +2396,9 @@ circle:nth-child(2n) {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  padding-top: 2.5rem;
+  height: 100%;
+  padding-top: 1.5rem;
+  background: var(--yellow-2, #fffdf2);
 }
 .reviews__likes {
   color: var(--grey, #2b2b2b);
@@ -2691,7 +2744,7 @@ circle:nth-child(2n) {
 }
 @media (max-width: 1160px) {
   .about__item {
-    padding: calc(13.92px + 10.08 * ((100vw - 360px) / 800));
+    padding: calc(17.92px + 6.08 * ((100vw - 360px) / 800));
   }
 }
 @media (max-width: 1160px) {
@@ -3224,8 +3277,13 @@ circle:nth-child(2n) {
   padding-top: 3.75rem;
   display: flex;
   align-items: center;
-  gap: 2.13rem;
+  gap: 34.08px;
   padding-bottom: 1.25rem;
+}
+@media (max-width: 1160px) {
+  .blog__footer {
+    gap: calc(8px + 26.08 * ((100vw - 360px) / 800));
+  }
 }
 .blog__like {
   display: flex;
@@ -3320,10 +3378,23 @@ circle:nth-child(2n) {
   .blog__sort .blog__title {
     display: none;
   }
+  .blog__sort select {
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
+    background-color: #fff;
+  }
 }
 @media (max-width: 767px) {
   .blog__page {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.88rem 0.62rem;
+  }
+  .blog__page .blog__card {
+    display: flex;
+    flex-direction: column;
+  }
+  .blog__category .container {
+    gap: 1.88rem;
   }
 }
 .seo {
@@ -3357,7 +3428,7 @@ circle:nth-child(2n) {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 130%; /* 0rem */
 }
 @media (max-width: 1160px) {
@@ -3738,24 +3809,25 @@ html.lenis {
   left: 0;
   right: 0;
   margin: auto;
-  background-color: rgba(43, 43, 43, 0.3);
+  background-color: transparent;
   z-index: 99;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   visibility: hidden;
   pointer-events: none;
 }
 .modal .modal__container {
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
   visibility: hidden;
   opacity: 0;
 }
 .modal.active {
+  background-color: rgba(43, 43, 43, 0.3);
   pointer-events: all;
   visibility: visible;
-  animation: modal 0.8s;
+  animation: modal 0.5s;
 }
 .modal.active .modal__close {
   visibility: visible;
@@ -4478,11 +4550,17 @@ html.lenis {
   line-height: 100%;
   margin: 3.75rem auto 0;
   margin-top: 60px;
+  padding: 22.08px;
   font-size: 16px;
 }
 @media (max-width: 1160px) {
   .page-not-found__button {
     margin-top: calc(40px + 20 * ((100vw - 360px) / 800));
+  }
+}
+@media (max-width: 1160px) {
+  .page-not-found__button {
+    padding: calc(16px + 6.08 * ((100vw - 360px) / 800));
   }
 }
 @media (max-width: 1160px) {
@@ -4644,7 +4722,7 @@ html.lenis {
   position: relative;
   border-radius: 0.625rem;
   border: 1px solid var(--grey-3, #ddd);
-  padding: 1.5rem;
+  padding: 1.5rem 1.0625rem;
   transition: all 0.3s ease-in-out;
   width: 100%;
   display: flex;
@@ -4819,7 +4897,7 @@ html.lenis {
 @media (max-width: 767px) {
   .mmenu {
     display: block;
-    max-width: 16rem;
+    max-width: 17rem;
     width: 100%;
     position: fixed;
     max-height: 100dvh;
@@ -4851,12 +4929,12 @@ html.lenis {
     background: var(--grey, #2b2b2b);
     z-index: 4;
     transform: scale(0);
-    transition: all 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
   }
   .mmenu__bg.active {
     opacity: 0.3;
     transform: scale(1);
-    transition: all 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
   }
   .mmenu__wrapper {
     position: relative;
@@ -4910,7 +4988,7 @@ html.lenis {
     gap: 0.5rem;
     color: var(--grey, #2b2b2b);
     font-family: "Inter", sans-serif;
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -4942,7 +5020,7 @@ html.lenis {
   .mmenu__categories ul li {
     color: #2b2b2b;
     font-family: "Inter", sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -4976,7 +5054,7 @@ html.lenis {
   .mmenu__nav ul li {
     color: #2b2b2b;
     font-family: "Inter", sans-serif;
-    font-size: 0.625rem;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -5002,7 +5080,7 @@ html.lenis {
   .mmenu__cintacts-item {
     color: #2b2b2b;
     font-family: "Montserrat", sans-serif;
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     font-style: normal;
     font-weight: 700;
     line-height: 0%; /* 0rem */
@@ -5013,7 +5091,7 @@ html.lenis {
   .mmenu__footer {
     color: var(--grey-2, #8b8b8b);
     font-family: "Inter", sans-serif;
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -5630,12 +5708,12 @@ html.lenis {
     background: var(--grey, #2b2b2b);
     z-index: 4;
     transform: scale(0);
-    transition: all 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
   }
   .filter__bg.active {
     opacity: 0.3;
     transform: scale(1);
-    transition: all 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
   }
   .filter__head {
     display: flex;

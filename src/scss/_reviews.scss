@@ -30,6 +30,7 @@ circle:nth-child(2n) {
 		gap: 1rem;
 		border-radius: 0.625rem;
 		border: 1px solid var(--grey-3, #ddd);
+
 		padding: 1.12rem;
 		box-sizing: border-box;
 	}
@@ -182,6 +183,7 @@ circle:nth-child(2n) {
 		display: flex;
 		flex-direction: column;
 		gap: 1.06rem;
+		background: var(--yellow-2, #fffdf2);
 	}
 
 	&__line-item {
@@ -224,7 +226,9 @@ circle:nth-child(2n) {
 		flex-direction: column;
 		align-items: center;
 		gap: 1.5rem;
-		padding-top: 2.5rem;
+		height: 100%;
+		padding-top: 1.5rem;
+		background: var(--yellow-2, #fffdf2);
 	}
 
 	&__likes {

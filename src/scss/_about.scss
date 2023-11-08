@@ -88,8 +88,8 @@
 	&__item {
 		border-radius: 0.625rem;
 		background: var(--grey-4, #f3f3f3);
-		@include adaptiv-value("padding", toPX(1.5), toPX(0.87), 1);
-
+		@include adaptiv-value("padding", toPX(1.5), toPX(1.12), 1);
+		//border: 2px solid #f3f3f3;
 		color: $black_color;
 		font-family: $font-family-montserrat;
 		@include adaptiv-value("font-size", toPX(1.125), toPX(0.875), 1);

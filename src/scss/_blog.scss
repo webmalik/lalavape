@@ -333,7 +333,7 @@
 		padding-top: 3.75rem;
 		display: flex;
 		align-items: center;
-		gap: 2.13rem;
+		@include adaptiv-value("gap", toPX(2.13), toPX(0.5), 1);
 		padding-bottom: 1.25rem;
 	}
 
@@ -424,6 +424,14 @@
 				display: none;
 			}
 		}
+
+		&__sort {
+			select {
+				padding-top: 0.45rem;
+				padding-bottom: 0.45rem;
+				background-color: #fff;
+			}
+		}
 	}
 }
 
@@ -431,6 +439,18 @@
 	.blog {
 		&__page {
 			grid-template-columns: repeat(2, 1fr);
+			gap: 1.88rem 0.62rem;
+
+			.blog__card {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+
+		&__category {
+			.container {
+				gap: 1.88rem;
+			}
 		}
 	}
 }

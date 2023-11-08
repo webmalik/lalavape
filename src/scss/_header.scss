@@ -464,6 +464,10 @@
 			align-items: center;
 		}
 
+		&__navigations {
+			margin-top: 0.5rem;
+		}
+
 		&__list {
 			gap: 1rem;
 			li {
@@ -490,6 +494,9 @@
 			max-width: 5.625rem;
 			width: 5.625rem;
 			min-height: 5.64113rem;
+			@include adaptiv-value("max-width", toPX(5.625), toPX(3), 1);
+			@include adaptiv-value("min-height", toPX(5.64113), toPX(3.02), 1);
+			margin-left: 1.25rem;
 			display: block;
 
 			picture,
@@ -643,6 +650,10 @@
 
 		&__mobile-button {
 			display: block;
+			svg {
+				width: 30px;
+				height: 30px;
+			}
 		}
 		&__button {
 			display: none;
@@ -719,9 +730,10 @@
 		}
 	}
 	.contacts {
+		gap: 0.25rem;
 		&__item {
 			p {
-				font-size: 0.5rem;
+				font-size: 0.625rem;
 			}
 
 			img,
@@ -739,13 +751,21 @@
 		&__viber {
 			img,
 			svg {
-				width: 0.75rem;
-				height: 0.75rem;
+				@include adaptiv-value("width", toPX(1.5), toPX(0.85), 1);
+				@include adaptiv-value("height", toPX(1.5), toPX(0.85), 1);
 			}
 		}
 	}
 }
-
+@include media-width(368px) {
+	.contacts {
+		&__item {
+			p {
+				font-size: 0.5rem;
+			}
+		}
+	}
+}
 @keyframes scale-easeOutElastic {
 	0% {
 		transform: scale(1);
