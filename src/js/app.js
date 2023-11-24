@@ -7,10 +7,12 @@ const products = document.querySelector('.products');
 const login = document.querySelector('.login');
 const cabinet = document.querySelector('.cabinet');
 const product = document.querySelector('.product');
+const checkout = document.querySelector('.checkout');
 
 wmFunctions.tabs(cabinet);
 wmFunctions.tabs(login);
 wmFunctions.tabs(product);
+wmFunctions.tabs(checkout);
 
 wmFunctions.productSliders();
 wmFunctions.productImages();

@@ -534,7 +534,9 @@ export function readMore() {
 }
 
 export function locomotivescroll() {
-	const locomotiveScroll = new LocomotiveScroll({
+	let locomotiveScroll;
+
+	locomotiveScroll = new LocomotiveScroll({
 		lenisOptions: {
 			wrapper: window,
 			content: document.documentElement,
@@ -549,6 +551,55 @@ export function locomotivescroll() {
 			normalizeWheel: true,
 			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
 		},
+	});
+
+	function sc(s = true) {
+		if (s) {
+			locomotiveScroll = new LocomotiveScroll({
+				lenisOptions: {
+					wrapper: window,
+					content: document.documentElement,
+					lerp: 0.1,
+					duration: 1.2,
+					orientation: 'vertical',
+					gestureOrientation: 'vertical',
+					smoothWheel: true,
+					smoothTouch: false,
+					wheelMultiplier: 1,
+					touchMultiplier: 2,
+					normalizeWheel: true,
+					easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+				},
+			});
+		} else {
+			locomotiveScroll.destroy();
+		}
+	}
+
+	const scroll2 = document.querySelector('.checkout__main');
+	const locomotiveScroll2 = new LocomotiveScroll({
+		lenisOptions: {
+			wrapper: scroll2,
+			content: document.documentElement,
+			lerp: 0.1,
+			duration: 1.1,
+			orientation: 'vertical',
+			gestureOrientation: 'vertical',
+			smoothWheel: true,
+			smoothTouch: true,
+			wheelMultiplier: 1,
+			touchMultiplier: 2,
+			normalizeWheel: true,
+			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+		},
+	});
+
+	scroll2.addEventListener('mouseenter', () => {
+		sc(false);
+	});
+
+	scroll2.addEventListener('mouseleave', () => {
+		sc(true);
 	});
 }
 
