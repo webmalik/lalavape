@@ -183,6 +183,9 @@ circle:nth-child(2n) {
 		display: flex;
 		flex-direction: column;
 		gap: 1.06rem;
+	}
+
+	&__lines {
 		background: var(--yellow-2, #fffdf2);
 	}
 

@@ -3612,7 +3612,7 @@ html.lenis {
   display: flex;
   align-items: center;
   gap: 1rem;
-  overflow: auto;
+  overflow: auto;-webkit-overflow-scrolling:touch;
   margin-top: -1.38rem;
 }
 .drop__preview img {

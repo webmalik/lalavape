@@ -51,6 +51,7 @@
 			position: relative;
 			padding: 0.63rem 0.88rem 1.25rem;
 			overflow: auto;
+			-webkit-overflow-scrolling: touch;
 			height: 100%;
 			box-sizing: border-box;
 			display: flex;
@@ -159,16 +160,16 @@
 						font-weight: inherit;
 						line-height: inherit;
 
-						&::after {
-							content: "";
-							display: block;
-							background-image: url("../img/arrow-right.svg");
-							background-repeat: no-repeat;
-							background-position: center;
-							background-size: cover;
-							min-width: 0.625rem;
-							min-height: 0.625rem;
-						}
+						// &::after {
+						// 	content: "";
+						// 	display: block;
+						// 	background-image: url("../img/arrow-right.svg");
+						// 	background-repeat: no-repeat;
+						// 	background-position: center;
+						// 	background-size: cover;
+						// 	min-width: 0.625rem;
+						// 	min-height: 0.625rem;
+						// }
 					}
 				}
 			}

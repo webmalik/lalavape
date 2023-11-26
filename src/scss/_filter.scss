@@ -207,6 +207,7 @@
 
 		&__container {
 			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
 			overflow-y: none;
 			padding-right: 1rem;
 

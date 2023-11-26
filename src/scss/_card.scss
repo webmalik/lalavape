@@ -48,6 +48,17 @@
 		font-style: normal;
 		font-weight: 400;
 		line-height: 0%; /* 0rem */
+
+		&-add {
+			color: var(--grey-2, #8b8b8b);
+			font-family: $font-family-inter;
+			@include adaptiv-value("font-size", toPX(0.875), toPX(0.75), 1);
+			margin-left: 0.26rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 0%; /* 0rem */
+			text-decoration-line: underline;
+		}
 	}
 
 	&__price-status {

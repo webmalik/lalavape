@@ -29,6 +29,13 @@
 @font-face {
 	font-family: 'Inter';
 	font-display: swap;
+	src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Inter';
+	font-display: swap;
 	src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
 	font-weight: 600;
 	font-style: normal;
@@ -36,8 +43,8 @@
 @font-face {
 	font-family: 'Inter';
 	font-display: swap;
-	src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
-	font-weight: 500;
+	src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
+	font-weight: 600;
 	font-style: normal;
 }
 @font-face {
@@ -59,13 +66,6 @@
 	font-display: swap;
 	src: url("../fonts/Inter-500.woff") format("woff"), url("../fonts/Inter-500.woff2") format("woff2");
 	font-weight: 500;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Inter';
-	font-display: swap;
-	src: url("../fonts/Inter-600.woff") format("woff"), url("../fonts/Inter-600.woff2") format("woff2");
-	font-weight: 600;
 	font-style: normal;
 }
 @font-face {
@@ -73,13 +73,6 @@
 	font-display: swap;
 	src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
 	font-weight: 600;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Montserrat';
-	font-display: swap;
-	src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
-	font-weight: 500;
 	font-style: normal;
 }
 @font-face {
@@ -101,6 +94,13 @@
 	font-display: swap;
 	src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
 	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat';
+	font-display: swap;
+	src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
+	font-weight: 500;
 	font-style: normal;
 }
 @font-face {

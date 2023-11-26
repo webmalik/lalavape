@@ -575,32 +575,36 @@ export function locomotivescroll() {
 			locomotiveScroll.destroy();
 		}
 	}
-
 	const scroll2 = document.querySelector('.checkout__main');
-	const locomotiveScroll2 = new LocomotiveScroll({
-		lenisOptions: {
-			wrapper: scroll2,
-			content: document.documentElement,
-			lerp: 0.1,
-			duration: 1.1,
-			orientation: 'vertical',
-			gestureOrientation: 'vertical',
-			smoothWheel: true,
-			smoothTouch: true,
-			wheelMultiplier: 1,
-			touchMultiplier: 2,
-			normalizeWheel: true,
-			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-		},
-	});
+	if (scroll2) {
+		const locomotiveScroll2 = new LocomotiveScroll({
+			lenisOptions: {
+				wrapper: scroll2,
+				content: document.documentElement,
+				lerp: 0.1,
+				duration: 1.1,
+				orientation: 'vertical',
+				gestureOrientation: 'vertical',
+				smoothWheel: true,
+				smoothTouch: true,
+				wheelMultiplier: 1,
+				touchMultiplier: 2,
+				normalizeWheel: true,
+				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+			},
+		});
 
-	scroll2.addEventListener('mouseenter', () => {
-		sc(false);
-	});
 
-	scroll2.addEventListener('mouseleave', () => {
-		sc(true);
-	});
+		scroll2.addEventListener('mouseenter', () => {
+			sc(false);
+		});
+
+		scroll2.addEventListener('mouseleave', () => {
+			sc(true);
+		});
+
+	}
+
 }
 
 export function modal() {
@@ -621,10 +625,10 @@ export function modal() {
 			modal.forEach(function (mod) {
 				if (mod.getAttribute('data-modal') === dataModal) {
 					window = mod;
-					setTimeout(() => {
-						window.classList.remove('close__modal--animations');
-						window.classList.add('active');
-					}, 1200);
+					window.classList.add('active');
+					// setTimeout(() => {
+					// 	//window.classList.remove('close__modal--animations');
+					// }, 1200);
 
 				}
 			});
@@ -633,17 +637,17 @@ export function modal() {
 		el.addEventListener('click', () => {
 			let close = window.querySelector('.modal__close');
 			let wrapper = window.querySelector('.modal__wrapper');
-			window.classList.remove('close__modal--animations');
+			//window.classList.remove('close__modal--animations');
 			window.classList.add('active');
 
 			window.addEventListener('click', (e) => {
 				if (e.target != wrapper && !wrapper.contains(e.target)) {
-					window.classList.add('close__modal--animations');
+					//window.classList.add('close__modal--animations');
 					window.classList.remove('active');
 				}
 			});
 			close.addEventListener('click', () => {
-				window.classList.add('close__modal--animations');
+				//window.classList.add('close__modal--animations');
 				window.classList.remove('active');
 			});
 

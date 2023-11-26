@@ -86,6 +86,11 @@
 					font-style: normal;
 					font-weight: 400;
 					line-height: 0%; /* 0rem */
+					transition: $hover-transition;
+					&:hover {
+						color: $yellow_color;
+						transition: $hover-transition;
+					}
 				}
 			}
 		}

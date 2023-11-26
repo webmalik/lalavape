@@ -44,24 +44,24 @@
 					font-size: 0.875rem;
 					font-style: normal;
 					font-weight: 300;
-					&::after {
-						content: "";
-						display: block;
-						background-image: url("../img/arrow-right.svg");
-						background-repeat: no-repeat;
-						background-position: center;
-						background-size: cover;
-						min-width: 0.625rem;
-						min-height: 0.625rem;
-					}
+					// &::after {
+					// 	content: "";
+					// 	display: block;
+					// 	background-image: url("../img/arrow-right.svg");
+					// 	background-repeat: no-repeat;
+					// 	background-position: center;
+					// 	background-size: cover;
+					// 	min-width: 0.625rem;
+					// 	min-height: 0.625rem;
+					// }
 				}
 
 				&:hover {
 					a {
 						font-weight: 500;
-						&::after {
-							background-image: url("../img/arrow-right-hover.svg");
-						}
+						// &::after {
+						// 	background-image: url("../img/arrow-right-hover.svg");
+						// }
 					}
 				}
 			}

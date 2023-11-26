@@ -261,7 +261,9 @@
 		align-items: center;
 		gap: 1.5rem;
 		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
 		overflow-y: hidden;
+		//flex-wrap: wrap;
 
 		&::-webkit-scrollbar {
 			display: none;
@@ -276,6 +278,7 @@
 		font-weight: 700;
 		line-height: 0%; /* 0rem */
 		text-wrap: nowrap;
+		min-width: max-content;
 	}
 
 	&__tabs {
